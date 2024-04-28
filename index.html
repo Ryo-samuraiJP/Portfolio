@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <!-- REMIX ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"> 
+
+    <link rel="stylesheet" href="assets/css/styles.css"> 
+    <title>Portfolio</title>
+</head>        
+
+<body> 
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="fa-solid fa-dumbbell"></i>
+                Ryoichi Homma
+                <i class="fa-solid fa-baseball"></i>
+            </a>
+            <!-- Navigation Menu -->
+            <div class="nav__menu" id="nav-menu"> 
+                <ul class="nav__list grid">
+                    <!-- Home Navigator -->
+                    <li class="nav__item"> 
+                        <a href="#home" class="nav__link active-link">
+                            <i class="ri-home-3-fill"></i>Home
+                        </a>
+                    </li>
+                    <!-- Projects Navigator -->
+                    <li class="nav__item"> 
+                        <a href="#projects" class="nav__link">
+                            <i class="ri-task-fill"></i>Projects
+                        </a>
+                    </li>
+                    <!-- Skills Navigator -->
+                    <li class="nav__item"> 
+                        <a href="#skills" class="nav__link">
+                            <i class="ri-hand-coin-fill"></i>Skills
+                        </a>
+                    </li>
+                    <!-- Services Navigator -->
+                    <li class="nav__item"> 
+                        <a href="#services" class="nav__link">
+                            <i class="ri-shake-hands-fill"></i>Services
+                        </a>
+                    </li>
+                    <!-- Credentials Navigator -->
+                    <li class="nav__item"> 
+                        <a href="#credentials" class="nav__link">
+                            <i class="ri-award-fill"></i>Credentials
+                        </a>
+                    </li>
+                    <!-- Contact Navigator -->
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="ri-send-plane-fill"></i>Contact
+                        </a>
+                    </li>                            
+                </ul>
+                <!-- Close button -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-circle-line"></i>
+                </div>
+            </div>
+            <!-- Navigation Buttons -->
+            <div class="nav__buttons">
+                <!-- Mode change button -->
+                <i class="ri-moon-fill change-mode" id="moonIcon"></i>
+                <!-- Toggle button -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="main">
+        <!-- Home Section -->
+        <section class="home section" id="home"> 
+            <div class="home__container container grid section__border">
+                <div class="home__profile grid">
+                    <div class="profile__card">
+                        <div class="profile__card-circles">
+                            <span class="circle circle1"></span>
+                            <span class="circle circle2"></span>
+                            <span class="circle circle3"></span>
+                            <span class="circle circle4"></span>
+                            <span class="circle circle5">
+                                <img src="assets/img/flag.png">
+                            </span>
+                        </div>
+                        <div class="glass-frame"></div>
+                        <div class="profile__card-content">
+                            <span class="profile__card-title">
+                                <!-- Hi, there!<br>I'm Ryoichi Homma, -->
+                            </span>
+                            <span class="profile__card-description" id="job-titles">
+                                <!-- Full-stack developer,<br> 
+                                Android app developer,<br>
+                                Database engineer,<br>
+                                Software engineer,<br> 
+                                and Network engineer<br> -->
+                            </span>
+                        </div>
+                        <div class="profile__card-bottom">
+                            <div class="social-buttons-container">
+                                <button class="social-button .social-button1">
+                                    <a class="linkedin-button" href="https://www.linkedin.com/" target="_blank">
+                                        <svg id="linkedin" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                        </svg>
+                                    </a>
+                                </button>
+                                <button class="social-button .social-button2">
+                                    <a class="github-button" href="https://github.com/" target="_blank">
+                                        <svg id="github" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"/>
+                                        </svg>
+                                    </a>    
+                                </button>
+                                <!-- <button class="social-button .social-button3">
+                                    <a class="facebook-button" href="https://www.facebook.com/" target="_blank">
+                                        <svg id="facebook" viewBox="0 0 50 50" fill="currentColor">
+                                            <path d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z"></path>
+                                        </svg>                                           
+                                    </a>
+                                </button> -->
+                                <button class="social-button .social-button4">
+                                    <a class="discord-button" href="#" target="_blank">
+                                        <svg id="discord" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M19.3034 5.33716C17.9344 4.71103 16.4805 4.2547 14.9629 4C14.7719 4.32899 14.5596 4.77471 14.411 5.12492C12.7969 4.89144 11.1944 4.89144 9.60255 5.12492C9.45397 4.77471 9.2311 4.32899 9.05068 4C7.52251 4.2547 6.06861 4.71103 4.70915 5.33716C1.96053 9.39111 1.21766 13.3495 1.5891 17.2549C3.41443 18.5815 5.17612 19.388 6.90701 19.9187C7.33151 19.3456 7.71356 18.73 8.04255 18.0827C7.41641 17.8492 6.82211 17.5627 6.24904 17.2231C6.39762 17.117 6.5462 17.0003 6.68416 16.8835C10.1438 18.4648 13.8911 18.4648 17.3082 16.8835C17.4568 17.0003 17.5948 17.117 17.7434 17.2231C17.1703 17.5627 16.576 17.8492 15.9499 18.0827C16.2789 18.73 16.6609 19.3456 17.0854 19.9187C18.8152 19.388 20.5875 18.5815 22.4033 17.2549C22.8596 12.7341 21.6806 8.80747 19.3034 5.33716ZM8.5201 14.8459C7.48007 14.8459 6.63107 13.9014 6.63107 12.7447C6.63107 11.5879 7.45884 10.6434 8.5201 10.6434C9.57071 10.6434 10.4303 11.5879 10.4091 12.7447C10.4091 13.9014 9.57071 14.8459 8.5201 14.8459ZM15.4936 14.8459C14.4535 14.8459 13.6034 13.9014 13.6034 12.7447C13.6034 11.5879 14.4323 10.6434 15.4936 10.6434C16.5442 10.6434 17.4038 11.5879 17.3825 12.7447C17.3825 13.9014 16.5548 14.8459 15.4936 14.8459Z"></path>
+                                        </svg>
+                                    </a>
+                                </button>
+                                <button class="social-button .social-button5">
+                                    <a class="youtube-button" href="#" target="_blank">
+                                        <svg id="youtube" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M12.2439 4C12.778 4.00294 14.1143 4.01586 15.5341 4.07273L16.0375 4.09468C17.467 4.16236 18.8953 4.27798 19.6037 4.4755C20.5486 4.74095 21.2913 5.5155 21.5423 6.49732C21.942 8.05641 21.992 11.0994 21.9982 11.8358L21.9991 11.9884L21.9991 11.9991C21.9991 11.9991 21.9991 12.0028 21.9991 12.0099L21.9982 12.1625C21.992 12.8989 21.942 15.9419 21.5423 17.501C21.2878 18.4864 20.5451 19.261 19.6037 19.5228C18.8953 19.7203 17.467 19.8359 16.0375 19.9036L15.5341 19.9255C14.1143 19.9824 12.778 19.9953 12.2439 19.9983L12.0095 19.9991L11.9991 19.9991C11.9991 19.9991 11.9956 19.9991 11.9887 19.9991L11.7545 19.9983C10.6241 19.9921 5.89772 19.941 4.39451 19.5228C3.4496 19.2573 2.70692 18.4828 2.45587 17.501C2.0562 15.9419 2.00624 12.8989 2 12.1625V11.8358C2.00624 11.0994 2.0562 8.05641 2.45587 6.49732C2.7104 5.51186 3.45308 4.73732 4.39451 4.4755C5.89772 4.05723 10.6241 4.00622 11.7545 4H12.2439ZM9.99911 8.49914V15.4991L15.9991 11.9991L9.99911 8.49914Z"></path>
+                                        </svg>
+                                    </a>
+                                </button>
+                            </div>
+
+                            <div class="download-button-container">
+                                <button class="download-button" type="button">
+                                    <span class="button__text">Download CV</span>
+                                    <span class="button__icon">
+                                        <svg class="svg" id="download-button" viewBox="0 0 35 35" fill="currentColor">
+                                            <path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path>
+                                            <path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path>
+                                            <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Home Info-1 (Left side) -->
+                <div class="home__info">
+                    <div class="home__info-services"> 
+                        <h3 class="home__info-title">SERVICES</h3>
+                        <p class="home__info-description"> 
+                            Web Development<br>
+                            Android App Development<br>
+                            Database Development<br>
+                            Software Engineering<br>
+                            Network Engineering<br> 
+                        </p> 
+                    </div>
+                    <div class="home__info-languages"> 
+                        <h3 class="home__info-title">NATURAL LANGUAGES</h3>
+                        <p class="home__info-description">
+                            Japanese (native)<br>
+                            English (fluent)
+                        </p>
+                    </div>
+                    <div class="home__info-contact">
+                        <h3 class="home__info-title">CONTACT</h3>
+                        <p class="home__info-description"> 
+                            Kamloops, Canada<br> 
+                            r.homma.inbox@gmail.com<br> 
+                            +1 250-574-5624<br>
+                        </p> 
+                    </div>
+                </div>
+                <!-- Home Info-2 (Right side) -->
+                <div class="home__info">
+                    <div class="home__info-years"> 
+                        <h3 class="home__info-title">YEARS OF EXPERIENCE</h3>
+                        <p class="home__info-number">03+</p>
+                    </div>
+                    <div class="home__info-projects"> 
+                        <h3 class="home__info-title">NUMBER OF PROJECTS</h3>
+                        <p class="home__info-number">05+</p>
+                    </div>
+                    <div class="home__info-companies"> 
+                        <h3 class="home__info-title">
+                            COMPANIES WORKED<br>(Non-tech industries)
+                        </h3>
+                        <p class="home__info-number">04</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--********************* PROJECTS SECTION *********************-->
+        <section class="projects section" id="projects"> 
+            <h2 class="section__title">Projects</h2>
+            <span class="section__subtitle">Most recent works</span>
+
+            <div class="container section__border">
+                <div class="projects__container swiper">
+                    <div class="swiper-wrapper">
+                        <!-- PROJECT 1 -->
+                        <div class="projects__content swiper-slide"> 
+                            <a target="_blank" href="https://ai-visual-doppelganger.onrender.com/">
+                                <img src="assets/img/proj1.jpg" alt="project image" class="projects__img">
+                            </a>
+                            <div>
+                                <span class="projects__subtitle">Image replication web app</span>
+                                <h1 class="projects__title">AI Visual Doppelganger</h1>
+                                <a href="#" class="projects__button">
+                                    <span>View demo</span>
+                                    <i class="ri-arrow-right-circle-line"></i>
+                                </a>
+                                &#160; &#160;         
+                                <a href="#" class="projects__button">
+                                    <span>Source code</span>
+                                    <i class="ri-arrow-right-circle-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- PROJECT 2 -->
+                        <div class="projects__content swiper-slide"> 
+                            <img src="assets/img/proj2.jpeg" alt="project image" class="projects__img">
+                            <div>
+                                <span class="projects__subtitle">Food delivery app on Android</span>
+                                <h1 class="projects__title">PlateMate</h1>
+                                <a href="#" class="projects__button">
+                                    <span>View demo</span>
+                                    <i class="ri-arrow-right-circle-line"></i>
+                                </a>
+                                &#160; &#160;         
+                                <a href="#" class="projects__button">
+                                    <span>Source code</span>
+                                    <i class="ri-arrow-right-circle-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- PROJECT 3 -->
+                        <div class="projects__content swiper-slide"> 
+                            <a target="_blank" href="https://prezi.com/view/kiFUg0jNey3zD5mN1ctl/">
+                                <img src="assets/img/proj3.png" alt="project image" class="projects__img">
+                            </a>
+                            <div>
+                                <span class="projects__subtitle">4+1 diagrams of food delivery system</span>
+                                <h1 class="projects__title">PlateMate Architecture</h1>
+                                <a href="#" class="projects__button">
+                                    <span>View demo</span>
+                                    <i class="ri-arrow-right-circle-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- PROJECT 4 -->
+                        <div class="projects__content swiper-slide"> 
+                            <img src="assets/img/proj4.png" alt="project image" class="projects__img">
+                            <div>
+                                <span class="projects__subtitle">Campus network infrastructure design</span>
+                                <h1 class="projects__title">Campus Network Simulator</h1>
+                                <a href="#" class="projects__button">
+                                    <span>View demo</span>
+                                    <i class="ri-arrow-right-circle-line"></i>
+                                </a>
+                                &#160; &#160;         
+                                <a href="#" class="projects__button">
+                                    <span>View documentation</span>
+                                    <i class="ri-arrow-right-circle-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Swiper arrows -->
+                    <div class="swiper-button-next">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </div>
+                    <!-- Swiper pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <span class="section__subtitle">My technical skills</span>
+            <div class="skills__container container grid section__border"> 
+                <!-- 1st category (frontend/backend/DBMS) -->
+                <div class="skills__content">
+                    <h3 class="skills__title"> 
+                        <i class="ri-computer-line"></i>Frontend/Backend/DBMS
+                    </h3>
+                    <div class="skills__info">
+                        <!-- HTML -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/html.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">HTML</h3>
+                            <span class="skills__subtitle">Advanced</span>
+                        </div>
+                        <!-- CSS -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/css.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">CSS</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- JavaScript -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/js.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">JavaScript</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- Python -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/python.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Python</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- C Language -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/c.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">C</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- C# -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/cSharp.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">C#</h3>
+                            <span class="skills__subtitle">Basic</span>
+                        </div>
+                        <!-- Java -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/java.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Java</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- MySQL -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/mySQL.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">MySQL</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- Oracle SQL -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/oracle-sql.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Oracle SQL</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2nd category (frameworks & libraries) -->
+                <div class="skills__content">
+                    <h3 class="skills__title"> 
+                        <i class="ri-git-repository-line"></i>Frameworks & Libraries
+                    </h3>
+                    <div class="skills__info">
+                        <!-- React -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/react.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">React</h3>
+                            <span class="skills__subtitle">Basic</span>
+                        </div>
+                        <!-- EmailJS -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/emailJS.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">EmailJS</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- Swiper -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/swiperJS.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Swiper</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- Scroll Reveal -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/scrollReveal.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">ScrollReveal</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- Flask -->
+                        <div class="skills__data">
+                            <div class="skills__blob">
+                                <img src="assets/img/flask.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Flask</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- Pillow -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/pillow.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Pillow</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- Google Fonts -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/google-fonts.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Google<br>Fonts</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- Font Awesome -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/fontAwesome.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Font<br>Awesome</h3>
+                            <span class="skills__subtitle">Advanced</span>
+                        </div>
+                        <!-- Uiverse.io -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/uiverse.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Uiverse.io</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3rd category (network/web design & diagramming tools) -->
+                <div class="skills__content">
+                    <h3 class="skills__title"> 
+                        <i class="ri-pencil-ruler-2-line"></i>Network/Web/Diagram Design Tools
+                    </h3>
+                    <div class="skills__info">
+                        <!-- Cisco Packet Tracer -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/cisco.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Cisco Packet<br>Tracer</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- Figma -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/figma.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Figma</h3>
+                            <span class="skills__subtitle">Basic</span>
+                        </div>
+                        <!-- Easing Gradient -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/easing-gradient.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Easing<br>Gradient</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- Relume -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/relume.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Relume</h3>
+                            <span class="skills__subtitle">Basic</span>
+                        </div>
+                        <!-- Lucidchart -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/lucidchart.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Lucidchart</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- draw.io -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/draw-io.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">draw.io</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- ArgoUML -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/argouml.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">ArgoUML</h3>
+                            <span class="skills__subtitle">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4th category (IDEs) -->
+                <div class="skills__content">
+                    <h3 class="skills__title"> 
+                        <i class="ri-code-block"></i>IDEs
+                    </h3>
+                    <div class="skills__info">
+                        <!-- VS Code -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/vs-code.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">VS Code</h3>
+                            <span class="skills__subtitle">Advanced</span>
+                        </div>
+                        <!-- Visual Studio -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/visual-studio.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Visual<br>Studio</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- Android Studio -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/android-studio.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Android<br>Studio</h3>
+                            <span class="skills__subtitle">Advanced</span>
+                        </div>
+                        <!-- PyCharm -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/pyCharm.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">PyCharm</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- Dev-C++ -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/dev-C++.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Dev-C++</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- Eclipse -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/eclipse.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Eclipse</h3>
+                            <span class="skills__subtitle">Basic</span>
+                        </div>
+                        <!-- MySQL Workbench -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/workbench.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">MySQL<br>Workbench</h3>
+                            <span class="skills__subtitle">Basic</span>
+                        </div>
+                        <!-- Oracle SQL Developer -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/oracle-sql.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Oracle SQL<br>Developer</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5th category (cloud platforms) -->
+                <div class="skills__content">
+                    <h3 class="skills__title"> 
+                        <i class="ri-cloud-line"></i>Cloud Platforms
+                    </h3>
+                    <div class="skills__info">
+                        <!-- Render -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/render.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Render</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- Zeet -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/zeet.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Zeet</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6th category (AI tools)-->
+                <div class="skills__content">
+                    <h3 class="skills__title"> 
+                        <i class="ri-robot-3-line"></i>AI Tools
+                    </h3>
+                    <div class="skills__info">
+                        <!-- GPT-3.5 -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/chatgpt.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">GPT-3.5</h3>
+                            <span class="skills__subtitle">Advanced</span>
+                        </div>
+                        <!-- Microsoft Copilot -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/copilot.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Copilot</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- Prezi -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/prezi.png" alt="skills image">
+                            </div>
+                            <h3 class="skills__name">Prezi</h3>
+                            <span class="skills__subtitle">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--************************ SERVICES SECTION **************************-->
+        <section class="services section" id="services"> 
+            <h2 class="section__title">Services</h2>
+            <span class="section__subtitle">What I contribute to you</span>
+            <div class="services__container container grid section__border">
+                <!-- SERVICES 1 (Full-stack web dev) -->
+                <div class="service__card" id="web-development">
+                    <h2 class="service__name">Full Stack Web Development</h2>
+                    <h3 class="service__description">
+                        "Develop dynamic and modern web applications from front-end to back-end. 
+                        Seamlessly integrate user interfaces with robust server-side logic, 
+                        ensuring a smooth and engaging user experience."
+                    </h3>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z"></path>
+                    </svg>
+                    <p>View more</p>
+                </div>
+                <!-- SERVICES 2 (Database development) -->
+                <div class="service__card" id="database-development">
+                    <h2 class="service__name">Database Development</h2>
+                    <h3 class="service__description">
+                        "Design and implement efficient and scalable database solutions tailored
+                        to clients' needs. Utilize intermediate SQL skills and expertise in
+                        diagramming tools to create optimized database schemas."
+                    </h3>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M5 12.5C5 12.8134 5.46101 13.3584 6.53047 13.8931C7.91405 14.5849 9.87677 15 12 15C14.1232 15 16.0859 14.5849 17.4695 13.8931C18.539 13.3584 19 12.8134 19 12.5V10.3287C17.35 11.3482 14.8273 12 12 12C9.17273 12 6.64996 11.3482 5 10.3287V12.5ZM19 15.3287C17.35 16.3482 14.8273 17 12 17C9.17273 17 6.64996 16.3482 5 15.3287V17.5C5 17.8134 5.46101 18.3584 6.53047 18.8931C7.91405 19.5849 9.87677 20 12 20C14.1232 20 16.0859 19.5849 17.4695 18.8931C18.539 18.3584 19 17.8134 19 17.5V15.3287ZM3 17.5V7.5C3 5.01472 7.02944 3 12 3C16.9706 3 21 5.01472 21 7.5V17.5C21 19.9853 16.9706 22 12 22C7.02944 22 3 19.9853 3 17.5ZM12 10C14.1232 10 16.0859 9.58492 17.4695 8.89313C18.539 8.3584 19 7.81342 19 7.5C19 7.18658 18.539 6.6416 17.4695 6.10687C16.0859 5.41508 14.1232 5 12 5C9.87677 5 7.91405 5.41508 6.53047 6.10687C5.46101 6.6416 5 7.18658 5 7.5C5 7.81342 5.46101 8.3584 6.53047 8.89313C7.91405 9.58492 9.87677 10 12 10Z"></path>
+                    </svg>
+                    <p>View more</p>
+                </div>
+                <!-- SERVICES 3 (Network design) -->
+                <div class="service__card" id="network-engineering"> 
+                    <h2 class="service__name">Network Engineering</h2>
+                    <h3 class="service__description">
+                        "Architect and configure robust network infrastructures to support
+                        organizations' operations. Harness the capability of Cisco Packet
+                        Tracer to design resilient networks with high availability and security."
+                    </h3>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.0001 14V11H13.0001V14H18.0001C18.5524 14 19.0001 14.4477 19.0001 15V21C19.0001 21.5523 18.5524 22 18.0001 22H6.00015C5.44786 22 5.00015 21.5523 5.00015 21V15C5.00015 14.4477 5.44786 14 6.00015 14H11.0001ZM2.51074 8.83686C3.83432 4.86424 7.58275 2 12.0001 2C16.4176 2 20.166 4.86424 21.4896 8.83686L19.5917 9.46949C18.5328 6.29139 15.5341 4 12.0001 4C8.46623 4 5.46749 6.29139 4.40862 9.46949L2.51074 8.83686ZM6.3065 10.1021C7.10065 7.71854 9.34971 6 12.0001 6C14.6506 6 16.8996 7.71854 17.6938 10.1021L15.7959 10.7347C15.2665 9.1457 13.7671 8 12.0001 8C10.2332 8 8.73382 9.1457 8.20439 10.7347L6.3065 10.1021ZM7.00015 16V20H17.0001V16H7.00015Z"></path>
+                    </svg>
+                    <p>View more</p>
+                </div>
+                <!-- SERVICES 4 (Android app development) -->
+                <div class="service__card" id="android-app-development">
+                    <h2 class="service__name">Android App Development</h2>
+                    <h3 class="service__description">
+                        "Craft cutting-edge Android applications with sleek designs and intuitive
+                        user interfaces. Leverage the power of Android Studio and industry best
+                        practices to develop feature-rich apps that meet users' demands."
+                    </h3>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 13H5V20H19V13ZM19 11C19 7.13401 15.866 4 12 4C8.13401 4 5 7.13401 5 11H19ZM6.38231 3.9681C7.92199 2.73647 9.87499 2 12 2C14.125 2 16.078 2.73647 17.6177 3.9681L19.0711 2.51472L20.4853 3.92893L19.0319 5.38231C20.2635 6.92199 21 8.87499 21 11V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V11C3 8.87499 3.73647 6.92199 4.9681 5.38231L3.51472 3.92893L4.92893 2.51472L6.38231 3.9681ZM9 9C8.44772 9 8 8.55228 8 8C8 7.44772 8.44772 7 9 7C9.55228 7 10 7.44772 10 8C10 8.55228 9.55228 9 9 9ZM15 9C14.4477 9 14 8.55228 14 8C14 7.44772 14.4477 7 15 7C15.5523 7 16 7.44772 16 8C16 8.55228 15.5523 9 15 9Z"></path>
+                    </svg>
+                    <p>View more</p>
+                </div>
+                <!-- SERVICES 5 (Software engineering) -->
+                <div class="service__card" id="software-engineering">
+                    <h2 class="service__name">Software Engineering</h2>
+                    <h3 class="service__description">
+                        "Engineer efficient, secured, scalable, maintainable, and reliable
+                        software solutions tailored to clients' needs. Utilize the 
+                        Agile methodologies and best practices to deliver high-quality
+                        software on time and within budget."
+                    </h3>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15 3C15.5523 3 16 3.44772 16 4V8C16 8.55228 15.5523 9 15 9H13V11H17C17.5523 11 18 11.4477 18 12V15H20C20.5523 15 21 15.4477 21 16V20C21 20.5523 20.5523 21 20 21H14C13.4477 21 13 20.5523 13 20V16C13 15.4477 13.4477 15 14 15H16V13H8V15H10C10.5523 15 11 15.4477 11 16V20C11 20.5523 10.5523 21 10 21H4C3.44772 21 3 20.5523 3 20V16C3 15.4477 3.44772 15 4 15H6V12C6 11.4477 6.44772 11 7 11H11V9H9C8.44772 9 8 8.55228 8 8V4C8 3.44772 8.44772 3 9 3H15ZM9 17H5V19H9V17ZM19 17H15V19H19V17ZM14 5H10V7H14V5Z"></path>
+                    </svg>
+                    <p>View more</p>
+                </div>
+            </div>
+        </section>                
+
+        <!--******************* CREDENTIALS SECTION ******************-->
+        <section class="credentials section" id="credentials"> 
+            <h2 class="section__title">Credentials</h2>
+            <span class="section__subtitle">My academic and professional backgrounds</span>
+
+            <div class="credentials__container container grid section__border">
+                <div class="credentials__tabs">
+                    <div class="credentials__button button--flex credentials__active" data-target="#education" id="education-button">
+                        <i class="ri-graduation-cap-fill"></i>Education
+                    </div>
+                    <div class="credentials__button button--flex" data-target="#career" id="career-button">
+                        <i class="ri-suitcase-fill"></i>Career
+                    </div>
+                </div>
+
+                <div class="credentials__contents">
+                    <div class="credentials__content credentials__active" info-content id="education">
+
+                        <div class="credentials__info">
+                            <div class="credentials__info-left">
+                                <h3 class="credentials__name">Computing Science Diploma</h3>
+                                <span class="credentials__location">Thompson Rivers University, Canada</span>
+                                <div class="credentials__duration">
+                                    <i class="ri-calendar-2-line"></i>Jan. 2021 - Apr. 2024
+                                </div>
+                            </div>
+                            <div>
+                                <span class="credentials__sphere-point"></span>
+                                <span class="credentials__line"></span>
+                            </div>
+                        </div>
+
+                        <div class="credentials__info">
+                            <div></div>
+                            <div>
+                                <span class="credentials__sphere-point"></span>
+                                <!-- <span class="credentials__line"></span> -->
+                            </div>
+                            <div class="credentials__info-right">
+                                <h3 class="credentials__name">Global Consumer Intelligence</h3>
+                                <span class="credentials__location">
+                                    The University of Tokyo, Japan
+                                </span>
+                                <div class="credentials__duration">
+                                    <i class="ri-calendar-2-line"></i>Apr. 2023 - Jul. 2023
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="credentials__content" info-content id="career">
+
+                        <div class="credentials__info">
+                            <div class="credentials__info-left">
+                                <h3 class="credentials__name">
+                                    Shift Leader | Sushi Chef | Server
+                                </h3>
+                                <span class="credentials__location">Sushiro, Japan</span>
+                                <div class="credentials__duration">
+                                    <i class="ri-calendar-2-line"></i>Apr. 2014 - May. 2017
+                                </div>
+                            </div>
+                            <div>
+                                <span class="credentials__sphere-point"></span>
+                                <span class="credentials__line"></span>
+                            </div>
+                        </div>
+
+                        <div class="credentials__info">
+                            <div></div>
+                            <div>
+                                <span class="credentials__sphere-point"></span>
+                                <span class="credentials__line"></span>
+                            </div>
+                            <div class="credentials__info-right">
+                                <h3 class="credentials__name">Mover</h3>
+                                <span class="credentials__location">
+                                    Family Moving Center, Japan<br>
+                                    Sato Packing Transportation, Japan
+                                </span>
+                                <div class="credentials__duration">
+                                    <i class="ri-calendar-2-line"></i>Nov. 2018 - Dec. 2019
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="credentials__info">
+                            <div class="credentials__info-left">
+                                <h3 class="credentials__name">
+                                    Personal Trainer | Fitness Trainer
+                                </h3>
+                                <span class="credentials__location">Central Wellness Sports Club, Japan</span>
+                                <div class="credentials__duration">
+                                    <i class="ri-calendar-2-line"></i>Apr. 2022 - Aug. 2022 & 2023 (Seasonal)
+                                </div>
+                            </div>
+                            <div>
+                                <span class="credentials__sphere-point"></span>
+                                <!-- <span class="credentials__line"></span> -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--********************* CONTACT SECTION *********************** -->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact</h2>
+            <span class="section__subtitle">Feel free to contact me</span>
+
+            <div class="contact__container container grid section__border">
+                <!-- CONTACT 1 (Left side)  -->
+                <div class="contact__content"> 
+                    <h3 class="contact__title"> 
+                        <i class="ri-question-answer-line"></i>Reach me out
+                    </h3>
+                    <div class="contact__info"> 
+                        <div class="contact__data"> 
+                            <span class="contact__data-title">
+                                <i class="ri-mail-fill"></i>Email
+                            </span>
+                            <span class="contact__data-info">r.homma.inbox@gmail.com</span>
+                        </div>
+                        <div class="contact__data"> 
+                            <span class="contact__data-title">
+                                <i class="ri-linkedin-box-fill"></i>LinkedIn
+                            </span>
+                            <span class="contact__data-info">@ryoichi-homma-jp-to-ca</span>
+                            <a href="https://www.linkedin.com/in/ryoichi-homma-jp-to-ca/" target="_blank" class="contact__button">
+                                <span>Message me</span>
+                                <i class="ri-arrow-right-circle-line"></i>
+                            </a>
+                        </div>
+                        <!-- <div class="contact__data"> 
+                            <span class="contact__data-title">
+                                <i class="ri-messenger-fill"></i>Messenger
+                            </span>
+                            <span class="contact__data-info">@r.homma.jp.to.ca</span>
+                            <a href="https://www.facebook.com/r.homma.jp.to.ca" target="_blank" class="contact__button">
+                                <span>Message me</span>
+                                <i class="ri-arrow-right-circle-line"></i>
+                            </a>
+                        </div> -->
+                        <div class="contact__data"> 
+                            <span class="contact__data-title">
+                                <i class="ri-discord-fill"></i>Discord
+                            </span>
+                            <span class="contact__data-info">@ryoichihomma</span>
+                            <a href="https://www.facebook.com/r.homma.jp.to.ca" target="_blank" class="contact__button">
+                                <span>Message me</span>
+                                <i class="ri-arrow-right-circle-line"></i>
+                            </a>
+                        </div>
+                        <div class="download__button-container">
+                            <button class="download__button" type="button">
+                                <span class="download__button-text">Download CV</span>
+                                <span class="download__button-icon">
+                                    <i class="ri-download-2-line"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTACT 2 (Right side)  -->
+                <div class="contact__content"> 
+                    <h3 class="contact__title">
+                        <i class="ri-mail-send-line"></i>Send me your inquiry
+                    </h3>
+                    <form action="" class="contact__form" id="contact-form">
+                        <div class="contact__form-div">
+                            <label class="contact__form-tag">Name</label>
+                            <input type="text" name="user_name" required placeholder="Enter your name" class="contact__form-input" id="contact-name">
+                        </div> 
+                        <div class="contact__form-div">
+                            <label class="contact__form-tag">Email</label>
+                            <input type="email" name="user_email" required placeholder="Enter your email address" class="contact__form-input" id="contact-email">
+                        </div>
+                        <div class="contact__form-div">
+                            <label class="contact__form-tag">Subject</label>
+                            <input type="subject" name="user_subject" required placeholder="Enter the subject" class="contact__form-input" id="contact-subject">
+                        </div> 
+                        <div class="contact__form-div contact__form-area">
+                            <label class="contact__form-tag">Content</label>
+                            <textarea name="user_task" placeholder="Enter your inquiry" id="contact-task" class="contact__form-input"></textarea>
+                        </div>
+                        <p class="contact__message" id="contact-message"></p>
+                        <button type="submit" class="contact__button">
+                            <span>Submit</span>
+                            <i class="ri-flight-takeoff-line"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>  
+    </main> 
+
+    <!--********************** FOOTER SECTION ************************-->
+    <footer class="footer">
+        <div class="footer__container container"> 
+            <h1 class="footer__title">Ryoichi Homma</h1>
+            <div class="footer__subtitle grid">
+                <p>Full stack Developer</p>
+                <p>Database Developer</p>
+                <p>Network Engineer</p>
+                <p>Android App Developer</p>
+                <p>Software Engineer</p>
+            </div>
+            <ul class="footer__list grid">
+                <a href="#home" class="footer__link">Home</a>
+                <a href="#projects" class="footer__link">Projects</a>
+                <a href="#skills" class="footer__link">Skills</a>
+                <a href="#services" class="footer__link">Services</a>
+                </li>
+            </ul>
+            <ul class="footer__social">
+                <a href="https://www.linkedin.com/" target="_blank" class="footer__social-link"> 
+                    <i class="ri-linkedin-box-fill"></i>
+                </a>
+                <a href="https://github.com/" target="_blank" class="footer__social-link"> 
+                    <i class="ri-github-fill"></i>
+                </a>
+                <!-- <a href="https://www.facebook.com/" target="_blank" class="footer__social-link"> 
+                    <i class="ri-facebook-box-fill"></i>
+                </a> -->
+                <a href="" target="_blank" class="footer__social-link"> 
+                    <i class="ri-discord-fill"></i>
+                </a>
+                <a href="" target="_blank" class="footer__social-link"> 
+                    <i class="ri-youtube-fill"></i>
+                </a>
+            </ul>
+            <span class="footer__copyright">
+                &#169; 2024 - Ryoichi Homma. All rights reserved.
+            </span>
+        </div>
+    </footer>
+
+    <!-- SCROLL UP -->
+    <a href="#home" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-circle-line"></i>
+    </a>
+    <!-- SCROLL REVEAL -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <!-- SWIPER JS -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- EmailJS Settings -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- MAIN -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
