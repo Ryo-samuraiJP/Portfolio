@@ -2132,9 +2132,12 @@ body.dark-mode {
         grid-template-rows: repeat(3, 130px);
         row-gap: 4rem; 
     }
-    .home__info-contact,
+    .home__info-contact, 
     .home__info-companies {
         margin-top: -3rem;
+    }
+    .home__info-projects {
+        margin-top: -1.5rem;
     }
 
     .projects__container {
