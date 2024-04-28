@@ -30,7 +30,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 // Function to display the sentence with typing animation
 function displaySentence() {
     var sentenceElement = document.getElementById("job-titles");
-    var sentence = "Hi there, I am Ryoichi Homma, Full-Stack Developer, Database Developer, Network Engineer, Android App Developer, and Software Engineer!";
+    var sentence = "Hi there, I am Ryoichi Homma, Full-Stack Developer, Database Developer, Network Engineer, Android App Developer, and Software Engineer, in Canada!";
     var index = 0;
     var timeout;
 
@@ -43,7 +43,7 @@ function displaySentence() {
                 sentenceElement.innerHTML += "<br>"; // add line break
                 index++; // move to the next character after the comma
             }
-            timeout = setTimeout(typeSentence, 50); // delay between each character
+            timeout = setTimeout(typeSentence, 25); // delay between each character
             index++;
         }
         else {
