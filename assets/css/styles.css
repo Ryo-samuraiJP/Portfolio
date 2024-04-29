@@ -1471,7 +1471,7 @@ body.dark-mode {
         font-size: var(--h3-font-size);
     }
     .profile__card-bottom {
-        width: 72%;
+        width: 65.5%;
         /* width: 79.5% if include facebook icon */
         margin: 0 0 -0.5rem -0.5rem;
     }
@@ -1489,7 +1489,7 @@ body.dark-mode {
         height: 25px;
     }
     .download-button-container {
-        margin-right: -3rem;
+        margin-right: -4rem;
     }
     .home__info {
         margin-left: .5rem;
@@ -1577,7 +1577,7 @@ body.dark-mode {
     }
 }
 
-/***************** smaller devices (normal iPhone series) **************/
+/********** smaller devices (bigger than Samsung Galaxy series) ********/
 @media screen and (min-width: 359px) {
     .home__container {
         margin-top: -2rem;
@@ -1685,7 +1685,7 @@ body.dark-mode {
     }
 }
 
-/******************* small devices (iPhone Plus series) ****************/
+/***** small devices (bigger than Google Pixel/iPhone Plus series) *****/
 @media screen and (min-width: 410px) {
     .home__profile {
         margin-bottom: 2.5rem;
@@ -1766,7 +1766,31 @@ body.dark-mode {
     }
 }
 
-/******************* medium devices (small tablet size) ****************/
+/********** Bigger than mobile breakpoint horizontally 533px ***********/
+@media screen and (min-width: 532px) {
+    .profile__card {
+        width: 75%;
+        justify-self: center;
+    }
+    .profile__card-bottom {
+        width: 69%;
+    }
+    
+    .projects__container {
+        width: 90%;
+    }
+
+    .skills__info {
+        margin-left: 3rem; 
+        margin-right: 3rem;
+    }
+
+    /* .credentials__info-left {
+        margin-left: 0;
+    } */
+}
+
+/*********** medium devices (bigger than small tablet size) ************/
 @media screen and (min-width: 599px) {
     .nav,
     .nav__menu {
@@ -1789,8 +1813,11 @@ body.dark-mode {
         opacity: 1;
     }
     .profile__card-bottom {
-        width: 65.5%;
+        width: 62%;
         margin: 1rem 0 .5rem .25rem;
+    }
+    .download-button-container {
+        margin-right: -6.5rem;
     }
 
     .projects__container {
@@ -1814,6 +1841,8 @@ body.dark-mode {
     }
     .skills__info {
         column-gap: 3rem;
+        margin-left: 0; 
+        margin-right: 0;
     }
 
     .service__card svg {
@@ -1825,6 +1854,9 @@ body.dark-mode {
         font-size: var(--h2-font-size);
         margin-bottom: 1rem;
     }
+    /* .credentials__info-left {
+        margin-left: .75rem;
+    } */
     .credentials__info-right {
         margin-left: 2rem;
     }
@@ -1857,8 +1889,8 @@ body.dark-mode {
     }
 }
 
-/******* medium devices (iPad, 15-inch laptop half creen size) *********/
-@media screen and (min-width: 767px) {
+/* medium devices (iPad / 15-inch laptop half creen / Samsung Galaxy series horizontal screen size) */
+@media screen and (min-width: 739px) {
     .home__container {
         margin-top: 0.5rem;
         grid-template-columns: 1fr 2fr 1fr;
@@ -1933,6 +1965,13 @@ body.dark-mode {
     }
     .footer__list {
         column-gap: 3.5rem;
+    }
+}
+
+/************ Bigger than mobile breakpoint horizontally 896px *********/
+@media screen and (min-width: 895px) {
+    .profile__card {
+        width: 380px;
     }
 }
 
@@ -2105,7 +2144,7 @@ body.dark-mode {
 }
 
 
-/***************** large devices (13-14 inch laptop size) **************/
+/********* large devices (bigger than 13-14 inch laptop size) **********/
 @media screen and (min-width: 1200px) {
     .section__border {
         padding-bottom: 6rem;
@@ -2159,6 +2198,7 @@ body.dark-mode {
     .projects__img {
         width: 320px;
         margin-bottom: 2rem;
+        margin-top: 1.75rem;
     }
 
     .skills__container {
