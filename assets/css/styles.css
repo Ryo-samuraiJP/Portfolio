@@ -1423,7 +1423,7 @@ body.dark-mode {
     position: fixed; 
     right: 1rem; 
     bottom: -30%;  /* scrollup button is invisible unless higher than 350 viewport height */
-    background-color: var(--body-color);
+    background-color: var(--header-color);
     box-shadow: 0 4px 12px hsl(207, 24%, 35%, .15); 
     display: inline-flex;
     padding: .35rem; 
@@ -1499,6 +1499,20 @@ body.dark-mode {
         width: 200px; 
         justify-self: center;
         margin-top: 2rem;
+    }
+    .projects__title {
+        font-size: var(--h3-font-size);
+    }
+    #project1-buttons,
+    #project4-buttons {
+        grid-template-columns: repeat(2, max-content);
+        display: grid;
+        column-gap: 1rem;
+        row-gap: .25rem;
+    }
+    #project2-buttons {
+        display: flex;
+        column-gap: 1.25rem;
     }
 
     .skills__info {
@@ -1618,6 +1632,20 @@ body.dark-mode {
     .projects__img {
         margin-top: 1.25rem;
     }
+    .projects__subtitle {
+        font-size: var(--middle-font-size);
+    }
+    #project1-buttons,
+    #project4-buttons {
+        grid-template-columns: repeat(2, max-content);
+        display: grid;
+        column-gap: 1rem;
+        row-gap: .25rem;
+    }
+    #project2-buttons {
+        display: flex;
+        column-gap: 1.25rem;
+    }
 
     .skills__info {
         column-gap: 0;
@@ -1723,6 +1751,14 @@ body.dark-mode {
         font-size: var(--normal-font-size);
     }
 
+    .projects__img {
+        width: 280px;
+        margin-top: .5rem;
+    }
+    .projects__subtitle {
+        font-size: var(--normal-font-size);
+    }
+
     /* .skills__info {
         column-gap: 0rem;
     } */
@@ -1777,7 +1813,26 @@ body.dark-mode {
     }
     
     .projects__container {
-        width: 90%;
+        width: 95%;
+    }
+    .projects__img {
+        width: 350px;
+        margin-top: -0.5rem;
+    }
+    .projects__subtitle {
+        font-size: var(--h3-font-size);
+    }
+    .projects__title {
+        font-size: var(--h1-font-size);
+    }
+    #project1-buttons,
+    #project2-buttons,
+    #project4-buttons {
+        column-gap: 2rem;
+    }
+    .projects__button span, 
+    .projects__button i {
+        font-size: var(--normal-font-size);
     }
 
     .skills__info {
@@ -1821,19 +1876,31 @@ body.dark-mode {
     }
 
     .projects__container {
-        width: 510px;
+        width: 100%;
         overflow: hidden;
     }
     .projects__container .swiper-button-next {
         right: 1rem;
+        margin-top: 1.5rem;
     }
     .projects__container .swiper-button-prev {
         left: 1rem;
+        margin-top: 1.5rem;
     }
     .projects__img {
-        width: 320px;
+        width: 400px;
         margin-bottom: 2rem;
         margin-top: 0;
+    }
+    #project1-buttons,
+    #project2-buttons,
+    #project4-buttons {
+        display: flex;
+        column-gap: 2rem;
+    }
+    .projects__button-contents span,
+    .projects__button-contents i {
+        font-size: var(--normal-font-size);
     }
 
     .skills__container {
@@ -1923,6 +1990,11 @@ body.dark-mode {
     .projects__img {
         width: 400px; 
     }
+    #project1-buttons,
+    #project2-buttons,
+    #project4-buttons {
+        column-gap: 2.5rem;
+    }
 
     .skills__container {
         grid-template-columns: repeat(2, max-content);
@@ -1972,6 +2044,15 @@ body.dark-mode {
 @media screen and (min-width: 895px) {
     .profile__card {
         width: 380px;
+    }
+
+    .projects__container {
+        width: 80%;
+    }
+    #project1-buttons,
+    #project2-buttons,
+    #project4-buttons {
+        column-gap: 2rem;
     }
 }
 
@@ -2077,6 +2158,21 @@ body.dark-mode {
         box-shadow: 0 6px 24px hsla(207, 24%, 8%, .6);
     }
 
+    .projects__img {
+        width: 400px;
+    }
+    .projects__subtitle {
+        font-size: var(--normal-font-size);
+    }
+    .projects__title {
+        font-size: var(--h2-font-size);
+        font-weight: var(--font-semi-bold);
+    }
+    .projects__button span,
+    .projects__button i {
+        font-size: var(--middle-font-size);
+    }
+
     .skills__container {
         column-gap: 7.5rem;
     }
@@ -2180,7 +2276,7 @@ body.dark-mode {
     }
 
     .projects__container {
-        width: 900px;
+        width: 910px;
     }
     .projects__container .swiper-button-next, 
     .projects__container .swiper-button-prev {
@@ -2199,6 +2295,10 @@ body.dark-mode {
         width: 320px;
         margin-bottom: 2rem;
         margin-top: 1.75rem;
+    }
+    #project1-buttons,
+    #project4-buttons {
+        display: grid;
     }
 
     .skills__container {
