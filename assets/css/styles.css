@@ -23,7 +23,7 @@
     --profile__shadow-color: rgba(5, 45, 71, 0.537) 40px 50px 25px -40px, rgba(5, 36, 71, 0.2) 0px 50px 250px -5px;
     --linkedin-color: #0274b3;
     --github-color: #000;
-    --facebook-color: #1877f2;
+    /* --facebook-color: #1877f2; */
     --discord-color: #5865f2;
     --youtube-color: #ff0000;
     --service__web-color: linear-gradient(295deg, hsl(61, 100%, 92%), rgb(123, 195, 255)); 
@@ -169,7 +169,7 @@ body.dark-mode {
 .dark-mode .nav, 
 .dark-mode .nav__menu, 
 .dark-mode .scrollup {
-    background-color: var(--container-color); 
+    background-color: var(--header-color); 
     box-shadow: 0 4px 20px hsla(207, 24%, 8%, .4);
 }
 
@@ -565,8 +565,7 @@ body.dark-mode {
     width: 3em;
 }
 #linkedin, 
-#github, 
-#facebook {
+#github {
     color: #4c4c4ccc; 
     width: 32px; 
     height: 32px;
@@ -608,11 +607,6 @@ body.dark-mode {
     background-color: #fff;
     border-radius: 4px;
 }
-.social-button:hover #facebook {
-    color: var(--facebook-color);
-    background-color: #fff;
-    border-radius: 4px;
-}
 .social-button:hover #discord {
     color: #fff;
     background-color: var(--discord-color);
@@ -632,9 +626,6 @@ body.dark-mode {
 .github-button:active {
     background: var(--github-color);
 }
-.facebook-button:active {
-    background: var(--facebook-color);
-}
 .discord-button:active {
     background: var(--discord-color);
 }
@@ -648,10 +639,6 @@ body.dark-mode {
 .social-button:active #github{
     fill: #fff;
     background: var(--github-color);
-}
-.social-button:active #facebook {
-    fill: #fff;
-    background: var(--facebook-color);
 }
 .social-button:active #discord {
     background-color:  #fff;
@@ -774,7 +761,6 @@ body.dark-mode {
 }
 
 .projects__button i {
-    font-size: 1rem; 
     transition: transform .3s;
 }
 
@@ -1174,7 +1160,7 @@ body.dark-mode {
 }
 
 .contact__data-title i {
-    margin-right: .25rem;
+    margin-right: .5rem;
 }
 
 .contact__data-info {
@@ -1403,7 +1389,7 @@ body.dark-mode {
 /************************** SCROLL BAR SETTINGS ********************************/
 /* Scroll bar */ 
 ::-webkit-scrollbar {
-    width: .6rem; 
+    width: .6rem;
     border-radius: .5rem; 
     background-color: hsl(207, 4%, 75%);
 }
@@ -1481,7 +1467,6 @@ body.dark-mode {
     }
     #linkedin, 
     #github, 
-    #facebook, 
     #discord, 
     #youtube {
         width: 25px; 
@@ -1503,7 +1488,7 @@ body.dark-mode {
         font-size: var(--h3-font-size);
     }
     #project1-buttons,
-    #project4-buttons {
+    #project3-buttons {
         grid-template-columns: repeat(2, max-content);
         display: grid;
         column-gap: 1rem;
@@ -1512,6 +1497,12 @@ body.dark-mode {
     #project2-buttons {
         display: flex;
         column-gap: 1.25rem;
+    }
+    .projects__button i {
+        font-size: 1rem;
+    }
+    .projects__button .bi-globe2 {
+        font-size: .9rem;
     }
 
     .skills__info {
@@ -1612,7 +1603,6 @@ body.dark-mode {
     }
     #linkedin, 
     #github, 
-    #facebook, 
     #discord, 
     #youtube {
         width: 27px; 
@@ -1635,7 +1625,7 @@ body.dark-mode {
         font-size: var(--middle-font-size);
     }
     #project1-buttons,
-    #project4-buttons {
+    #project3-buttons {
         grid-template-columns: repeat(2, max-content);
         display: grid;
         column-gap: 1rem;
@@ -1644,6 +1634,15 @@ body.dark-mode {
     #project2-buttons {
         display: flex;
         column-gap: 1.25rem;
+    }
+    .projects__button span {
+        font-size: var(--middle-font-size);
+    }
+    .projects__button i {
+        font-size: 1.1rem;
+    }
+    .projects__button .bi-globe2 {
+        font-size: 1rem;
     }
 
     .skills__info {
@@ -1737,7 +1736,6 @@ body.dark-mode {
     }
     #linkedin, 
     #github, 
-    #facebook, 
     #discord, 
     #youtube {
         width: 30px; 
@@ -1756,6 +1754,12 @@ body.dark-mode {
     }
     .projects__subtitle {
         font-size: var(--normal-font-size);
+    }
+    .projects__button i {
+        font-size: 1.2rem;
+    }
+    .projects__button .bi-globe2 {
+        font-size: 1.1rem;
     }
 
     /* .skills__info {
@@ -1826,12 +1830,14 @@ body.dark-mode {
     }
     #project1-buttons,
     #project2-buttons,
-    #project4-buttons {
+    #project3-buttons {
         column-gap: 2rem;
     }
-    .projects__button span, 
-    .projects__button i {
+    .projects__button span {
         font-size: var(--normal-font-size);
+    }
+    .projects__button i {
+        font-size: 1.25rem;
     }
 
     .skills__info {
@@ -1893,13 +1899,9 @@ body.dark-mode {
     }
     #project1-buttons,
     #project2-buttons,
-    #project4-buttons {
+    #project3-buttons {
         display: flex;
         column-gap: 2rem;
-    }
-    .projects__button-contents span,
-    .projects__button-contents i {
-        font-size: var(--normal-font-size);
     }
 
     .skills__container {
@@ -1967,7 +1969,7 @@ body.dark-mode {
     }
     .profile__card {
         width: 100%;
-        margin-left: 0.5rem;
+        /* margin-left: 0.5rem; */
         margin-top: -2rem;
     }
     .home__info:nth-child(3) {
@@ -1988,11 +1990,6 @@ body.dark-mode {
     }
     .projects__img {
         width: 400px; 
-    }
-    #project1-buttons,
-    #project2-buttons,
-    #project4-buttons {
-        column-gap: 2.5rem;
     }
 
     .skills__container {
@@ -2048,11 +2045,6 @@ body.dark-mode {
     .projects__container {
         width: 80%;
     }
-    #project1-buttons,
-    #project2-buttons,
-    #project4-buttons {
-        column-gap: 2rem;
-    }
 }
 
 /******************** large devices (iPad Pro size) ********************/
@@ -2071,16 +2063,14 @@ body.dark-mode {
         margin-inline: 1.5rem; 
         padding: 0;
     }
+    .nav__logo {
+        margin-left: 1.5rem;
+    }
     .nav__link {
         display: block;
     }
     .nav__close,
-    .ri-home-3-fill,
-    .ri-task-fill,
-    .ri-hand-coin-fill, 
-    .ri-shake-hands-fill,
-    .ri-award-fill, 
-    .ri-send-plane-fill, 
+    .nav__link i,
     .ri-menu-line {
         display: none;
     }
@@ -2099,12 +2089,9 @@ body.dark-mode {
 
     .dark-mode .nav, 
     .dark-mode .nav__menu {
-        background-color: var(--body-color); 
+        background-color: var(--header-color); 
         box-shadow: none;
     }
-    /* .change-mode {
-        color: var(--text-color);
-    } */
     .change-mode:hover {
         color: var(--title-color);
     }
@@ -2167,8 +2154,7 @@ body.dark-mode {
         font-size: var(--h2-font-size);
         font-weight: var(--font-semi-bold);
     }
-    .projects__button span,
-    .projects__button i {
+    .projects__button span {
         font-size: var(--middle-font-size);
     }
 
@@ -2241,6 +2227,10 @@ body.dark-mode {
 
 /********* large devices (bigger than 13-14 inch laptop size) **********/
 @media screen and (min-width: 1200px) {
+    .nav__logo {
+        margin-left: 0;
+    }
+
     .section__border {
         padding-bottom: 6rem;
     }
@@ -2296,8 +2286,14 @@ body.dark-mode {
         margin-top: 1.75rem;
     }
     #project1-buttons,
-    #project4-buttons {
+    #project3-buttons {
         display: grid;
+    }
+    .projects__button i {
+        font-size: 1.2rem;
+    }
+    .projects__button .bi-globe2 {
+        font-size: 1rem;
     }
 
     .skills__container {

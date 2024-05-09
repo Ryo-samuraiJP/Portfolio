@@ -111,26 +111,31 @@ tabs.forEach(tab => {
 const contactForm = document.getElementById('contact-form'),
     contactName = document.getElementById('contact-name'),
     contactEmail = document.getElementById('contact-email'),
-    contactTask = document.getElementById('contact-task'),
-    contactMessage = document.getElementById('contact-message');
+    contactSubject = document.getElementById('contact-subject'),
+    contactContent = document.getElementById('contact-content'),
+    contactStatus = document.getElementById('contact-status');
 
 const sendEmail = (e) => {
     e.preventDefault();
 
     // check if the field has a value
-    if(contactName.value === '' || contactEmail.value === '' || contactTask.value === '') {
-        contactMessage.classList.add('color-red');
-        contactMessage.classList.remove('color-blue');
+    if(contactName.value === '' || contactEmail.value === '' || contactSubject.value === '' || contactContent.value === '') {
+        contactStatus.classList.add('color-red');
+        contactStatus.classList.remove('color-blue');
 
         // show error message if there is an empty field
-        contactMessage.textContent = 'Please fill all input fields ⚠️';
+        contactStatus.textContent = 'Please fill all input fields ⚠️';
+
+        setTimeout(() => {
+            contactStatus.textContent = '';
+        }, 5000);
     }
     else {
         // service ID, Template ID, #contact-form, Public key
         emailjs.sendForm('service_b0glpz8', 'template_tm31dkp', '#contact-form', 'JlD8T5SOu2dXKRnSW').then(() => {
             // show message if successfully submitted
-            contactMessage.classList.add('color-blue');
-            contactMessage.textContent = 'Your message submitted ✅';
+            contactStatus.classList.add('color-blue');
+            contactStatus.textContent = 'Your message submitted ✅';
 
         }, (error) => {
             alert('OOPS! SOMETHING HAS FAILED...', error);
@@ -140,8 +145,9 @@ const sendEmail = (e) => {
         setTimeout(() => {
             contactName.value = '';
             contactEmail.value = '';
-            contactTask.value = '';
-            contactMessage.textContent = '';
+            contactSubject.value = '';
+            contactContent.value = '';
+            contactStatus.textContent = '';
         }, 5000);
     }
 }
@@ -196,11 +202,11 @@ const selectedMode = localStorage.getItem('selected-mode');
 const selectedIcon = localStorage.getItem('selected-icon');
 
 const getCurrentMode = () => document.body.classList.contains(darkMode) ? 'dark' : 'light';
-const getCurrentIcon = () => modeButton.classList.contains(iconMode) ? 'ri-contrast-2-fill' : 'ri-sun-line';
+const getCurrentIcon = () => modeButton.classList.contains(iconMode) ? 'ri-moon-fill' : 'ri-sun-line';
 
 if (selectedMode) {
 document.body.classList[selectedMode === 'dark' ? 'add' : 'remove'](darkMode);
-modeButton.classList[selectedIcon === 'ri-contrast-2-fill' ? 'add' : 'remove'](iconMode);
+modeButton.classList[selectedIcon === 'ri-moon-fill' ? 'add' : 'remove'](iconMode);
 }
 
 // Activate / deactivate the mode manually with the button
