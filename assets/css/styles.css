@@ -161,7 +161,7 @@ body.dark-mode {
     --credentials-button__hover-color: hsla(265, 26%, 67%, 0.767);
     --credentials-button__active-color: hsl(265, 26%, 67%);
 
-    /* night mode cadidates */
+    /* dark mode cadidates */
     background-image: linear-gradient(17deg, rgba(41, 41, 41, 0.02) 0%, rgba(41, 41, 41, 0.02) 48%,rgba(10, 10, 10, 0.02) 48%, rgba(10, 10, 10, 0.02) 59%,rgba(164, 164, 164, 0.02) 59%, rgba(164, 164, 164, 0.02) 73%,rgba(79, 79, 79, 0.02) 73%, rgba(79, 79, 79, 0.02) 93%,rgba(42, 42, 42, 0.02) 93%, rgba(42, 42, 42, 0.02) 100%),linear-gradient(42deg, rgba(124, 124, 124, 0.02) 0%, rgba(124, 124, 124, 0.02) 15%,rgba(116, 116, 116, 0.02) 15%, rgba(116, 116, 116, 0.02) 23%,rgba(41, 41, 41, 0.02) 23%, rgba(41, 41, 41, 0.02) 44%,rgba(196, 196, 196, 0.02) 44%, rgba(196, 196, 196, 0.02) 54%,rgba(145, 145, 145, 0.02) 54%, rgba(145, 145, 145, 0.02) 100%),linear-gradient(151deg, rgba(85, 85, 85, 0.02) 0%, rgba(85, 85, 85, 0.02) 12%,rgba(72, 72, 72, 0.02) 12%, rgba(72, 72, 72, 0.02) 28%,rgba(156, 156, 156, 0.02) 28%, rgba(156, 156, 156, 0.02) 33%,rgba(230, 230, 230, 0.02) 33%, rgba(230, 230, 230, 0.02) 50%,rgba(13, 13, 13, 0.02) 50%, rgba(13, 13, 13, 0.02) 100%),linear-gradient(76deg, rgba(25, 25, 25, 0.02) 0%, rgba(25, 25, 25, 0.02) 9%,rgba(183, 183, 183, 0.02) 9%, rgba(183, 183, 183, 0.02) 32%,rgba(19, 19, 19, 0.02) 32%, rgba(19, 19, 19, 0.02) 86%,rgba(129, 129, 129, 0.02) 86%, rgba(129, 129, 129, 0.02) 88%,rgba(174, 174, 174, 0.02) 88%, rgba(174, 174, 174, 0.02) 100%),linear-gradient(90deg, rgb(41, 41, 41),rgb(8, 8, 8));
     /* background-image: linear-gradient(216deg, rgba(77, 77, 77,0.05) 0%, rgba(77, 77, 77,0.05) 25%,rgba(42, 42, 42,0.05) 25%, rgba(42, 42, 42,0.05) 38%,rgba(223, 223, 223,0.05) 38%, rgba(223, 223, 223,0.05) 75%,rgba(36, 36, 36,0.05) 75%, rgba(36, 36, 36,0.05) 100%),linear-gradient(44deg, rgba(128, 128, 128,0.05) 0%, rgba(128, 128, 128,0.05) 34%,rgba(212, 212, 212,0.05) 34%, rgba(212, 212, 212,0.05) 57%,rgba(25, 25, 25,0.05) 57%, rgba(25, 25, 25,0.05) 89%,rgba(135, 135, 135,0.05) 89%, rgba(135, 135, 135,0.05) 100%),linear-gradient(241deg, rgba(55, 55, 55,0.05) 0%, rgba(55, 55, 55,0.05) 14%,rgba(209, 209, 209,0.05) 14%, rgba(209, 209, 209,0.05) 60%,rgba(245, 245, 245,0.05) 60%, rgba(245, 245, 245,0.05) 69%,rgba(164, 164, 164,0.05) 69%, rgba(164, 164, 164,0.05) 100%),linear-gradient(249deg, rgba(248, 248, 248,0.05) 0%, rgba(248, 248, 248,0.05) 32%,rgba(148, 148, 148,0.05) 32%, rgba(148, 148, 148,0.05) 35%,rgba(202, 202, 202,0.05) 35%, rgba(202, 202, 202,0.05) 51%,rgba(181, 181, 181,0.05) 51%, rgba(181, 181, 181,0.05) 100%),linear-gradient(92deg, rgb(0,0,0),rgb(0,0,0)); */
 }
@@ -177,7 +177,7 @@ body.dark-mode {
     border-bottom: 1px solid hsl(207, 4%, 32%);
 }
 
-.dark-mode::-webkit-scrollbar {
+.dark-mode::-webkit-scrollbar-track {
     background-color: hsl(207, 4%, 15%);
 }
 
@@ -260,18 +260,25 @@ body.dark-mode {
     font-family: var(--title-font); 
     font-weight: var(--font-medium);
     color: var(--title-color);
+    display: flex;
+    column-gap: .25rem;
 }
 
 .nav__logo i {
-    color: var(--text-color);
+    color: var(--text-color-light);
+    margin-top: .15rem;
 }
 
 .fa-solid.fa-dumbbell {
     margin-right: .2rem;
 }
 
-.fa-solid.fa-baseball {
+.fa-baseball-bat-ball {
     margin-left: .2rem;
+}
+
+.nav__logo:hover i {
+    color: var(--title-color);
 }
 
 @media screen and (max-width: 1023px) {
@@ -375,9 +382,9 @@ body.dark-mode {
     0% {
         transform: rotate3d(0) rotateY(0);
     }
-    5% {
+    /* 5% {
         transform: rotateY(360deg);
-    }
+    } */
     50% {
         transform: rotate3d(1, 1, 0, 35deg);
     }
@@ -1027,12 +1034,16 @@ body.dark-mode {
 }
 
 .service__card p {
-    opacity: 1;
     margin-top: 2rem;
 }
 
 .service__card:hover p {
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
+}
+
+.bi-search {
+    margin-left: .5rem;
 }
 
 
@@ -1213,10 +1224,7 @@ body.dark-mode {
 }
 .download__button,
 .download__button-text {
-    transition: all 0.1s;
-}
-.download__button-icon {
-    transition: all 0.3s;
+    transition: color 1s;   /* For dark mode animation */
 }
 .download__button-text {
     transform: translateX(15px);
@@ -1226,6 +1234,7 @@ body.dark-mode {
 .download__button .download__button-icon {
     position: absolute;
     transform: translateX(110px);
+    transition: all 0.3s;
     height: 100%;
     width: 35px;
     background-color: #dedede;
@@ -1247,6 +1256,9 @@ body.dark-mode {
 .download__button:active {
     transform: translate(3px, 3px);
     box-shadow: 0px 0px var(--text-color);
+}
+.ri-download-2-line {
+    font-size: var(--normal-font-size);
 }
 /* end of download CV button */
 
@@ -1426,7 +1438,10 @@ body.dark-mode {
 /* Scroll bar */ 
 ::-webkit-scrollbar {
     width: .6rem;
-    border-radius: .5rem; 
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-track {
     background-color: hsl(207, 4%, 75%);
 }
 
@@ -1573,7 +1588,8 @@ body.dark-mode {
         margin-bottom: 2rem;
     }
     .service__card:hover svg {
-        margin: -6rem -10rem -1rem -10rem;
+        margin-top: -12rem;
+        margin-bottom: 3rem;
     }
 
     .credentials__tabs {
@@ -1723,7 +1739,7 @@ body.dark-mode {
         width: 90%;
     }
     .service__description {
-        margin: 2rem .5rem 0 .5rem;
+        margin: 3rem 1rem 0 1rem;
     }
     .service__card:hover {
         width: 100%;
@@ -1731,6 +1747,11 @@ body.dark-mode {
     .service__card svg {
         width: 8rem;
         height: 8rem;
+        margin-bottom: 2rem;
+    }
+    .service__card:hover svg {
+        margin-top: -12rem;
+        margin-bottom: 3rem;
     }
 
     .credentials__tabs {
@@ -1855,13 +1876,15 @@ body.dark-mode {
         width: 95%;
         height: 280px;
     }
+    .service__description {
+        margin-top: 1.5rem;
+    }
     .service__card svg {
-        width: 20rem;
-        height: 20rem;
-        margin: -4rem -20rem 0 -20rem;
+        margin: -4rem 0rem 0 0rem;
     }
     .service__card:hover svg {
-        margin: -10rem -7rem -2rem -7rem;
+        margin-top: -14rem; 
+        margin-bottom: 1.5rem;
     }
 
     .credentials__button,
@@ -1928,6 +1951,11 @@ body.dark-mode {
     .skills__info {
         margin-left: 3rem; 
         margin-right: 3rem;
+    }
+
+    .service__card:hover svg {
+        margin-top: -12rem; 
+        margin-bottom: 1rem;
     }
 
     /* .credentials__info-left {
@@ -2010,7 +2038,7 @@ body.dark-mode {
     }
 
     .service__card svg {
-        margin: -2rem -20rem 0 -20rem;
+        margin-top: -2.75rem;
     }
 
     .credentials__button, 
@@ -2160,6 +2188,14 @@ body.dark-mode {
     .projects__container {
         width: 80%;
     }
+
+    .service__card:hover .service__description {
+        margin: 2.5rem 2rem 0 2rem;
+    }
+    .service__card:hover svg {
+        margin-top: -10rem; 
+        margin-bottom: 1.5rem;
+    }
 }
 
 /******************** large devices (iPad Pro size) ********************/
@@ -2291,6 +2327,9 @@ body.dark-mode {
         width: 250px; 
         height: 350px;
     }
+    .service__description {
+        margin-top: 0;
+    }
     .service__card svg {
         margin-top: -4rem;
     }
@@ -2304,6 +2343,10 @@ body.dark-mode {
     }
     .service__card:hover .service__description {
         font-size: var(--normal-font-size);
+        margin: 2.25rem .25rem 0rem .25rem;
+    }
+    .service__card:hover svg {
+        margin-top: -14rem; 
     }
 
     .credentials__tabs {
@@ -2475,7 +2518,10 @@ body.dark-mode {
     }
     .service__card:hover .service__name {
         font-size: var(--h2-font-size);
-        margin-top: 0rem;
+    }
+    .service__card svg {
+        width: 7.5rem; 
+        height: 7.5rem;
     }
 
     .credentials__tabs {
