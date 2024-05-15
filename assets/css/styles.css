@@ -948,13 +948,11 @@ body.dark-mode {
 .service__card:hover {
     background-color: var(--hover-color);
     box-shadow: 0 0 20px var(--text-color-light);
-    transform: scale(1.04) rotate(-1deg);
     transition: transform .5s;
 }
 
 .services__container:hover .service__card:not(:hover) {
     filter: blur(2px);
-    transform: scale(0.9);
     transition: .5s;
 }
 
