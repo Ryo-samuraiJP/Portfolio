@@ -1909,12 +1909,28 @@ body.dark-mode {
 
 /********** Bigger than mobile breakpoint horizontally 533px ***********/
 @media screen and (min-width: 532px) {
+    .home__container {
+        height: 860px;
+    }
     .profile__card {
         width: 75%;
         justify-self: center;
     }
     .profile__card-bottom {
         width: 69%;
+    }
+    .home__info {
+        margin-left: 0;
+    }
+    .home__info:nth-child(2) {
+        margin-left: 1rem;
+    }
+    .home__info:nth-child(3) {
+        position: relative;
+        bottom: 121.5%;
+        row-gap: 4.5rem;
+        text-align: right;
+        margin-right: 1.25rem;
     }
     
     .projects__container {
@@ -1996,6 +2012,12 @@ body.dark-mode {
     }
     .download-button-container {
         margin-right: -6.5rem;
+    }
+    .home__info:nth-child(2) {
+        margin-left: 1.5rem;
+    }
+    .home__info:nth-child(3) {
+        margin-right: 1.75rem;
     }
 
     .projects__container {
@@ -2095,6 +2117,8 @@ body.dark-mode {
     .home__container {
         margin-top: 0.5rem;
         grid-template-columns: 1fr 2fr 1fr;
+        height: 470px;
+        column-gap: 1.25rem;
     }
     .home__profile {
         order: 2; 
@@ -2105,13 +2129,18 @@ body.dark-mode {
         /* margin-left: 0.5rem; */
         margin-top: -2rem;
     }
-    .home__info:nth-child(3) {
-        order: 3; 
-        text-align: right;
-    }
     .home__info {
         margin-top: 2rem;
-        margin-left: 0rem;
+    }
+    .home__info:nth-child(2) {
+        margin-left: 0;
+    }
+    .home__info:nth-child(3) {
+        order: 3;
+        position: static;
+        bottom: 0%;
+        row-gap: 2rem;
+        margin-right: 0;
     }
 
     .projects__container {
@@ -2175,8 +2204,17 @@ body.dark-mode {
 
 /************ Bigger than mobile breakpoint horizontally 896px *********/
 @media screen and (min-width: 895px) {
+    .home__container {
+        column-gap: 0;
+    }
     .profile__card {
         width: 380px;
+    }
+    .home__info:nth-child(2) {
+        margin-left: 1.25rem;
+    }
+    .home__info:nth-child(3) {
+        margin-right: 1.75rem;
     }
 
     .projects__container {
@@ -2282,10 +2320,10 @@ body.dark-mode {
         margin-right: -8rem;
     }
     .home__info:nth-child(2) {
-        margin-left: .5rem;
+        margin-left: 1rem;
     }
     .home__info:nth-child(3) {
-        margin-right: .75rem;
+        margin-right: 1.25rem;
     }
 
     .scrollup {
@@ -2443,16 +2481,13 @@ body.dark-mode {
     .profile__card-description {
         margin-top: 1.5rem;
     }
-    .home__info {
-        grid-template-rows: repeat(3, 130px);
-        row-gap: 4rem; 
+    .home__info:nth-child(2) {
+        row-gap: 3rem;
+        margin-left: 2rem;
     }
-    .home__info-contact, 
-    .home__info-companies {
-        margin-top: -3rem;
-    }
-    .home__info-projects {
-        margin-top: -1.5rem;
+    .home__info:nth-child(3) {
+        row-gap: 3.5rem;
+        margin-right: 2rem;
     }
 
     .projects__container {
