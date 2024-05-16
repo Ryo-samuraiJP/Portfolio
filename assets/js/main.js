@@ -238,14 +238,10 @@ const sr = ScrollReveal({
     // reset: true /* Animations repeat */
 });
 
-sr.reveal('.home__profile, .projects__container, .footer__container');
+sr.reveal('.home__profile, .projects__container, .credentials__contents, .footer__container');
 sr.reveal('.home__info div', {delay: 600, origin: 'bottom', interval: 100});
-sr.reveal('.skills__content:nth-child(1)', {origin: 'left'});
-sr.reveal('.skills__content:nth-child(2)', {origin: 'right'});
-sr.reveal('.skills__content:nth-child(3)', {origin: 'left'});
-sr.reveal('.skills__content:nth-child(4)', {origin: 'right'});
-sr.reveal('.skills__content:nth-child(5)', {origin: 'left'});
-sr.reveal('.skills__content:nth-child(6)', {origin: 'right'});
-sr.reveal('.credentials__contents, .service__card', {interval: 100});
+sr.reveal('.skills__content:nth-child(1), .skills__content:nth-child(3)', {origin: 'left'});
+sr.reveal('.skills__content:nth-child(2), .skills__content:nth-child(4)', {origin: 'right'});
+sr.reveal('.service__card', {interval: 100});
 sr.reveal('.contact__content:nth-child(1)', {origin: 'left'});
 sr.reveal('.contact__content:nth-child(2)', {origin: 'right'});
