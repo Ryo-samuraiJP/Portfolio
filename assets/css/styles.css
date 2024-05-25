@@ -1374,7 +1374,7 @@ body.dark-mode {
     outline: none; 
     margin-top: .75rem;
     width: max-content;
-    display: inline-block;
+    display: inline-flex;
     align-items: center;
     column-gap: .5rem;
 }
