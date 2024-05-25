@@ -1364,7 +1364,7 @@ body.dark-mode {
     resize: none;
 }
 
-.contact__form .contact__submit-button {
+.contact__submit-button {
     border: none; 
     background: none; 
     font-size: var(--h2-font-size); 
@@ -1380,9 +1380,15 @@ body.dark-mode {
     color: var(--title-color); 
 }
 
-.contact__form .contact__submit-button i {
+.contact__submit-button i {
     font-size: 1.5rem; 
     font-weight: initial;
+    transition: transform .3s;
+    margin-left: .25rem;
+}
+
+.contact__submit-button:hover i {
+    transform: translateX(.25rem);
 }
 
 .contact__status {
