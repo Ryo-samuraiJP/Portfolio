@@ -764,10 +764,7 @@ body.dark-mode {
 }
 
 .home__info-description {
-    text-decoration: none; 
-    -webkit-text-decoration: none; /* to remove underline on Google Chrome, especially on iOS devices */
     -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
-    -webkit-user-modify: read-write-plaintext-only;
 }
 
 .home__info-description i {
@@ -1223,10 +1220,13 @@ body.dark-mode {
     font-family: var(--tiny-font); 
     color: var(--title-color);
     -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
-    text-decoration: none; 
-    -webkit-text-decoration: none; /* to remove underline on Google Chrome, especially on iOS devices */
-    -webkit-user-modify: read-write-plaintext-only;
 }
+
+.no-underline { /* to remove underline from contact texts when running on Google Chrome, especially on iOS devices */
+    text-decoration: none;
+    -webkit-text-decoration: none; 
+    -webkit-user-modify: read-write-plaintext-only;
+} 
 
 .contact__button {
     width: max-content; 
