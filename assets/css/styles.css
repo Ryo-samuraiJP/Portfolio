@@ -757,17 +757,12 @@ body.dark-mode {
     margin-bottom: 1rem;
 }
 
-.home__info-description, 
-.home__info-number {
-    font-family: var(--title-font); 
-    color: var(--title-color);
-}
-
 .home__info-description {
-    text-decoration: none; 
-    -webkit-text-decoration: none; /* to remove underline on Google Chrome, especially on iOS devices */
+    font-family: var(--title-font); 
     -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
-    -webkit-user-modify: read-write-plaintext-only;
+    color: var(--title-color);
+    -webkit-text-decoration-skip: none; /* to remove underline on Google Chrome, especially on iOS devices */
+    text-decoration: none; 
 }
 
 .home__info-description i {
@@ -775,8 +770,10 @@ body.dark-mode {
 }
 
 .home__info-number {
+    font-family: var(--title-font); 
     font-size: var(--h1-font-size); 
     font-weight: var(--font-semi-bold);
+    color: var(--title-color);
 }
 
 
@@ -1221,11 +1218,10 @@ body.dark-mode {
 .contact__data-info {
     font-size: var(--small-font-size); 
     font-family: var(--tiny-font); 
-    color: var(--title-color);
     -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
+    color: var(--title-color);
+    -webkit-text-decoration-skip: none; /* to remove underline on Google Chrome, especially on iOS devices */
     text-decoration: none; 
-    -webkit-text-decoration: none; /* to remove underline on Google Chrome, especially on iOS devices */
-    -webkit-user-modify: read-write-plaintext-only;
 }
 
 .contact__button {
