@@ -1450,19 +1450,19 @@ body.dark-mode {
     transition: transform .3s;
 }
 
-.fa-linkedin-in:hover {
+.footer__social-link .fa-linkedin-in:hover {
     color: var(--linkedin-color);
 }
 
-.fa-github:hover {
+.footer__social-link .fa-github:hover {
     color: var(--github-color2);
 }
 
-.fa-discord:hover {
+.footer__social-link .fa-discord:hover {
     color: var(--discord-color);
 }
 
-.fa-youtube:hover {
+.footer__social-link .fa-youtube:hover {
     color: var(--youtube-color);
 }
 
