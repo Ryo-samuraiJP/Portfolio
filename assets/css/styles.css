@@ -1211,14 +1211,12 @@ body.dark-mode {
     margin-right: .5rem;
 }
 
-/* .contact__button {
+.contact__link {
     width: max-content; 
-    display: inline-block;  */
-    /* align-items: center;  */
-    /* column-gap: .5rem; */
-    /* color: var(--title-color); 
+    display: inline-block; 
+    color: var(--title-color); 
     font-size: var(--small-font-size);
-} */
+}
 
 .contact__data-info {
     font-size: var(--small-font-size); 
@@ -1229,9 +1227,12 @@ body.dark-mode {
 }
 
 .contact__data-text {
-    display: flex; 
-    /* align-items: center; */
+    display: inline-flex; 
     margin-top: .75rem;
+}
+
+.contact__link:hover .contact__data-text {
+    text-decoration: underline;
 }
 
 .contact__data-text i {
@@ -1240,12 +1241,8 @@ body.dark-mode {
     transition: transform .3s;
 }
 
-.contact__button:hover i {
+.contact__link:hover i {
     transform: translateX(.25rem);
-}
-
-.contact__button:hover .contact__data-text {
-    text-decoration: underline;
 }
 
 /* Download CV button */
@@ -1259,7 +1256,7 @@ body.dark-mode {
     align-items: center;
     border: 2px solid var(--text-color);
     box-shadow: 4px 4px var(--text-color);
-    background-color: var(--container-color);   /* adjust later */ 
+    background-color: var(--container-color);
     border-radius: 5px;
     overflow: hidden;
 }
@@ -1275,7 +1272,7 @@ body.dark-mode {
 .download__button .download__button-icon {
     position: absolute;
     transform: translateX(110px);
-    transition: all 0.3s;
+    transition: all 0.4s;
     height: 100%;
     width: 35px;
     background-color: #dedede;
@@ -1292,7 +1289,6 @@ body.dark-mode {
 .download__button:hover .download__button-icon {
     width: 150px;
     transform: translateX(0);
-    font-weight: var(--font-semi-bold);
 }
 .download__button:active {
     transform: translate(3px, 3px);
@@ -1364,31 +1360,6 @@ body.dark-mode {
     resize: none;
 }
 
-.contact__form button {
-    border: none; 
-    background: none; 
-    font-size: var(--h2-font-size); 
-    font-family: var(--title-font); 
-    font-weight: var(--font-semi-bold); 
-    cursor: pointer; 
-    outline: none; 
-    margin-top: .75rem;
-    width: max-content; 
-    display: inline-block; 
-    color: var(--title-color); 
-}
-
-.contact__form button i {
-    font-size: 1.5rem; 
-    font-weight: initial;
-    display: inline-flex; 
-    transition: transform .3s;
-}
-
-.contact__form button:hover i {
-    transform: translateX(.25rem);
-}
-
 .contact__status {
     font-size: var(--small-font-size); 
     position: absolute; 
@@ -1404,6 +1375,32 @@ body.dark-mode {
 
 .color-blue {
     color: hsl(207, 56%, 45%);
+}
+
+.contact__form button {
+    border: none; 
+    background: none; 
+    font-size: var(--h2-font-size); 
+    font-family: var(--title-font); 
+    font-weight: var(--font-semi-bold); 
+    cursor: pointer; 
+    outline: none; 
+    margin-top: .75rem;
+    width: max-content; 
+    display: inline-block; 
+    align-items: center;
+    color: var(--title-color); 
+}
+
+.contact__form button i {
+    font-size: 1.5rem; 
+    font-weight: initial;
+    display: inline-flex; 
+    transition: transform .3s;
+}
+
+.contact__form button:hover i {
+    transform: translateX(.4rem);
 }
 
 
