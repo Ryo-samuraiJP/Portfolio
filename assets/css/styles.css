@@ -1372,7 +1372,7 @@ body.dark-mode {
     font-weight: var(--font-semi-bold); 
     cursor: pointer; 
     outline: none; 
-    /* margin-top: .75rem; */
+    margin-top: .75rem;
     width: max-content; 
     display: inline-block; 
     color: var(--title-color); 
