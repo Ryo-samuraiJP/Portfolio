@@ -1226,11 +1226,12 @@ body.dark-mode {
 
 .contact__button {
     width: max-content; 
-    display: inline-flex; 
+    display: grid;
     align-items: center; 
     column-gap: .5rem;
     color: var(--title-color); 
     font-size: var(--small-font-size);
+    grid-template-columns: max-content(1); 
 }
 
 .contact__button i {
@@ -1238,11 +1239,11 @@ body.dark-mode {
     transition: transform .3s;
 }
 
-.contact__button:hover i {
+.contact__button:hover .bi-feather {
     transform: translateX(.25rem);
 }
 
-.contact__button:hover span {
+.contact__button:hover .reachout {
     text-decoration: underline;
 }
 
