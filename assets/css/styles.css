@@ -1364,7 +1364,6 @@ body.dark-mode {
 
 .contact__form .contact__submit-button {
     width: max-content; 
-    display: inline-block; 
     border: none; 
     background: none; 
     font-size: var(--h2-font-size); 
