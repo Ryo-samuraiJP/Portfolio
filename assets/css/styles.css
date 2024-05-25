@@ -1374,11 +1374,20 @@ body.dark-mode {
     outline: none; 
     margin-top: .75rem;
     width: max-content;
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
 }
 
 .contact__form button i {
     font-size: 1.5rem; 
     font-weight: initial;
+    display: inline-flex;
+    transition: transform .3s;
+}
+
+.contact__form button:hover i {
+    transform: translateX(.25rem);
 }
 
 .contact__status {
