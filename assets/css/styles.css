@@ -347,7 +347,7 @@ body.dark-mode {
     row-gap: .25rem; 
     font-size: var(--smaller-font-size); 
     color: var(--text-color); 
-    transition: color .3s;
+    transition: transform .3s;
 }
 
 .nav__link i {
@@ -356,8 +356,6 @@ body.dark-mode {
 
 .nav__link:hover {
     color: var(--title-color);
-    transform: translateY(-.25rem);
-    transition: transform .3s;
 }
 
 .show-menu {
@@ -761,8 +759,6 @@ body.dark-mode {
     font-family: var(--title-font); 
     -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
     color: var(--title-color);
-    -webkit-text-decoration-skip: none; /* to remove underline on Google Chrome, especially on iOS devices */
-    text-decoration: none; 
 }
 
 .home__info-description i {
@@ -1095,12 +1091,12 @@ body.dark-mode {
     font-weight: var(--font-medium);
     cursor: pointer;
     color: var(--text-color-light);
+    transition: transform .3s;
 }
 
 .credentials__button:hover {
     color: var(--credentials-button__hover-color);
     transform: translateY(-5px); 
-    transition: transform .5s;
 }
 
 .credentials__button i {
@@ -1241,11 +1237,11 @@ body.dark-mode {
 .contact__data-text i {
     font-size: 1rem; 
     margin-left: .5rem;
+    transition: transform .3s;
 }
 
 .contact__button:hover i {
     transform: translateX(.25rem);
-    transition: transform .3s;
 }
 
 .contact__button:hover .contact__data-text {
@@ -1418,6 +1414,7 @@ body.dark-mode {
     grid-template-columns: repeat(5, max-content);
     justify-content: center;
     column-gap: 2.5rem;
+    font-style: italic;
 }
 
 .footer__list-item, 
@@ -1429,7 +1426,6 @@ body.dark-mode {
 .footer__list-item {
     margin: 2.5rem 0; 
     column-gap: 2rem;
-    font-weight: var(--font-medium);
 }
 
 .footer__link {
@@ -1453,7 +1449,6 @@ body.dark-mode {
 
 .footer__social-link:hover {
     transform: translateY(-.25rem);
-    transition: transform .3s;
 }
 
 .footer__social-link .fa-linkedin-in:hover {
@@ -1543,7 +1538,7 @@ body.dark-mode {
         padding-bottom: 4rem;
     }
     .nav__list {
-        gap: 1rem 1.25rem;
+        gap: 2rem 1.25rem;
     }
     .nav__buttons {
         column-gap: .75rem;
@@ -1707,6 +1702,13 @@ body.dark-mode {
     .nav__logo i {
         display: none;
     }
+    .nav__list {
+        gap: 2rem 2rem;
+    }
+    .nav__link:hover {
+        transform: translateY(-.25rem);
+        text-decoration: none;
+    }
     .nav__buttons {
         column-gap: .75rem;
     }
@@ -1861,15 +1863,26 @@ body.dark-mode {
     }
 }
 
+/***** small devices (bigger than iPhone 12 Pro series) *****/
+@media screen and (min-width: 379px) {
+    .profile__card-circles .circle2 {
+        opacity: 1;
+    }
+}
+
 /***** small devices (bigger than Google Pixel/iPhone Plus series) *****/
 @media screen and (min-width: 410px) {
+    .nav__list {
+        gap: 2rem 3rem;
+    }
+
     .home__profile {
         margin-bottom: 2.5rem;
     }
     .profile__card {
         height: 390px;
     }
-    .profile__card-circles .circle2 {
+    .profile__card-circles .circle1 {
         opacity: 1;
     }
     .profile__card-description {
@@ -1911,10 +1924,6 @@ body.dark-mode {
     .projects__button .bi-globe2 {
         font-size: 1.1rem;
     }
-
-    /* .skills__info {
-        column-gap: 0rem;
-    } */
 
     .service__card {
         width: 95%;
@@ -1959,6 +1968,17 @@ body.dark-mode {
 
 /********** Bigger than mobile breakpoint horizontally 533px ***********/
 @media screen and (min-width: 532px) {
+    .nav,
+    .nav__menu {
+        width: 380px;
+    }
+    .nav {
+        margin: 0 auto;
+    }
+    .nav__logo i {
+        display: inline;
+    }
+
     .home__container {
         height: 860px;
     }
@@ -2033,17 +2053,6 @@ body.dark-mode {
 
 /*********** medium devices (bigger than small tablet size) ************/
 @media screen and (min-width: 599px) {
-    .nav,
-    .nav__menu {
-        width: 380px;
-    }
-    .nav {
-        margin: 0 auto;
-    }
-    .nav__logo i {
-        display: inline;
-    }
-
     .home__profile {
         display: flex;
         justify-content: center;
@@ -2257,6 +2266,14 @@ body.dark-mode {
 
 /************ Bigger than mobile breakpoint horizontally 896px *********/
 @media screen and (min-width: 895px) {
+    .nav,
+    .nav__menu {
+        width: 420px;
+    }
+    .nav__list{
+        gap: 2.5rem 3.75rem;
+    }
+
     .home__container {
         column-gap: 0;
     }
@@ -2313,9 +2330,6 @@ body.dark-mode {
     .nav__logo {
         margin-left: 1.5rem;
     }
-    .nav__link {
-        display: block;
-    }
     .nav__close,
     .nav__link i,
     .ri-menu-line {
@@ -2331,7 +2345,12 @@ body.dark-mode {
         column-gap: 3rem;
     }
     .nav__link {
+        display: block;
         font-size: var(--normal-font-size);
+    }
+    .nav__link:hover {
+        text-decoration: underline;
+        transform: none;
     }
     .nav__buttons {
         margin-right: 1rem;
