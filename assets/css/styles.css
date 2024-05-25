@@ -1215,34 +1215,40 @@ body.dark-mode {
     margin-right: .5rem;
 }
 
-.contact__data-info {
-    font-size: var(--small-font-size); 
-    font-family: var(--tiny-font); 
-    -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
-    color: var(--title-color);
-    -webkit-text-decoration-skip: none; /* to remove underline on Google Chrome, especially on iOS devices */
-    text-decoration: none; 
-}
-
 .contact__button {
     width: max-content; 
-    display: inline-flex; 
-    align-items: center; 
-    column-gap: .5rem;
+    display: inline-block; 
+    /* align-items: center;  */
+    /* column-gap: .5rem; */
     color: var(--title-color); 
     font-size: var(--small-font-size);
 }
 
-.contact__button i {
+.contact__data-info {
+    font-size: var(--small-font-size); 
+    font-family: var(--tiny-font); 
+    display: block;
+    -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
+    color: var(--title-color);
+}
+
+.contact__data-text {
+    display: flex; 
+    /* align-items: center; */
+    margin-top: .75rem;
+}
+
+.contact__data-text i {
     font-size: 1rem; 
-    transition: transform .3s;
+    margin-left: .5rem;
 }
 
 .contact__button:hover i {
     transform: translateX(.25rem);
+    transition: transform .3s;
 }
 
-.contact__button:hover span {
+.contact__button:hover .contact__data-text {
     text-decoration: underline;
 }
 
