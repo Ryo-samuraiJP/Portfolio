@@ -1224,11 +1224,6 @@ body.dark-mode {
     text-decoration: none; 
 }
 
-.contact__data-info:hover {
-    -webkit-text-decoration-skip: none; /* to remove underline on Google Chrome, especially on iOS devices */
-    text-decoration: none; 
-}
-
 .contact__button {
     width: max-content; 
     display: inline-flex; 
