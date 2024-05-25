@@ -1372,10 +1372,9 @@ body.dark-mode {
     font-weight: var(--font-semi-bold); 
     cursor: pointer; 
     outline: none; 
-    margin-top: .75rem;
     width: max-content; 
     display: inline-block; 
-    /* align-items: center;  */
+    align-items: center; 
     /* column-gap: .5rem; */
     color: var(--title-color); 
 }
@@ -1383,6 +1382,13 @@ body.dark-mode {
 .contact__form .contact__submit-button i {
     font-size: 1.5rem; 
     font-weight: initial;
+    display: inline-flex;
+    transition: transform .3s;
+    margin-left: .25rem;
+}
+
+.contact__form .contact__submit-button:hover i {
+    transform: translateX(.25rem);
 }
 
 .contact__status {
