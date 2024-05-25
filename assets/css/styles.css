@@ -1215,7 +1215,7 @@ body.dark-mode {
     margin-right: .5rem;
 }
 
-.contact__button {
+.contact__link {
     width: max-content; 
     display: inline-block; 
     /* align-items: center;  */
@@ -1243,12 +1243,12 @@ body.dark-mode {
     margin-left: .5rem;
 }
 
-.contact__button:hover i {
+.contact__link:hover i {
     transform: translateX(.25rem);
     transition: transform .3s;
 }
 
-.contact__button:hover .contact__data-text {
+.contact__link:hover .contact__data-text {
     text-decoration: underline;
 }
 
@@ -1368,7 +1368,7 @@ body.dark-mode {
     resize: none;
 }
 
-.contact__form .contact__button {
+.contact__form .contact__submit-button {
     border: none; 
     background: none; 
     font-size: var(--h2-font-size); 
@@ -1379,7 +1379,7 @@ body.dark-mode {
     margin-top: .75rem;
 }
 
-.contact__form .contact__button i {
+.contact__form .contact__submit-button i {
     font-size: 1.5rem; 
     font-weight: initial;
 }
