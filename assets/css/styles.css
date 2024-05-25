@@ -1211,14 +1211,14 @@ body.dark-mode {
     margin-right: .5rem;
 }
 
-.contact__button {
+/* .contact__button {
     width: max-content; 
-    display: inline-block; 
+    display: inline-block;  */
     /* align-items: center;  */
     /* column-gap: .5rem; */
-    color: var(--title-color); 
+    /* color: var(--title-color); 
     font-size: var(--small-font-size);
-}
+} */
 
 .contact__data-info {
     font-size: var(--small-font-size); 
@@ -1364,7 +1364,7 @@ body.dark-mode {
     resize: none;
 }
 
-.contact__form .contact__button {
+.contact__form .contact__submit-button {
     border: none; 
     background: none; 
     font-size: var(--h2-font-size); 
@@ -1373,9 +1373,14 @@ body.dark-mode {
     cursor: pointer; 
     outline: none; 
     margin-top: .75rem;
+    width: max-content; 
+    display: inline-block; 
+    /* align-items: center;  */
+    /* column-gap: .5rem; */
+    color: var(--title-color); 
 }
 
-.contact__form .contact__button i {
+.contact__form .contact__submit-button i {
     font-size: 1.5rem; 
     font-weight: initial;
 }
