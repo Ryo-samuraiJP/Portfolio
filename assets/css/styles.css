@@ -1221,7 +1221,7 @@ body.dark-mode {
     -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
     color: var(--title-color);
     -webkit-text-decoration-skip: objects; /* to remove underline on Google Chrome, especially on iOS devices */
-    text-decoration: none; 
+    text-decoration: none !important; 
 }
 
 .contact__button {
