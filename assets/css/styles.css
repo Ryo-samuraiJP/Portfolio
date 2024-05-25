@@ -1212,7 +1212,7 @@ body.dark-mode {
 }
 
 .contact__link {
-    width: max-content; 
+    /* width: max-content;  */
     display: inline-block; 
     color: var(--title-color); 
     font-size: var(--small-font-size);
