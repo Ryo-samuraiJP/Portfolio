@@ -1373,7 +1373,7 @@ body.dark-mode {
     cursor: pointer; 
     outline: none; 
     margin-top: .75rem;
-    width: max-content;
+    text-align: left;
 }
 
 .contact__form button i {
