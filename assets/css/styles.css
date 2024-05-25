@@ -1363,8 +1363,8 @@ body.dark-mode {
 }
 
 .contact__form button {
-    width: max-content;
-    display: inline-block; 
+    /* width: max-content; */
+    display: inline-flex; 
     border: none; 
     background: none; 
     font-size: var(--h2-font-size); 
@@ -1376,11 +1376,10 @@ body.dark-mode {
 }
 
 .contact__form button i {
-    display: inline-block; 
     font-size: 1.5rem; 
     font-weight: initial;
     margin-top: .15rem;
-    margin-left: .25rem;
+    margin-left: .5rem;
     transition: transform .3s;
 }
 
