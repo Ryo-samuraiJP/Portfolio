@@ -1368,13 +1368,7 @@ body.dark-mode {
     resize: none;
 }
 
-<<<<<<< HEAD
-.contact__form .contact__submit-button {
-    width: max-content; 
-    display: inline-block; 
-=======
 .contact__form .contact__button {
->>>>>>> parent of a44a6a4 (Rename the class name and slight change)
     border: none; 
     background: none; 
     font-size: var(--h2-font-size); 
