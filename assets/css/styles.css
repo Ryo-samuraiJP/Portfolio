@@ -1373,13 +1373,12 @@ body.dark-mode {
     cursor: pointer; 
     outline: none; 
     margin-top: .75rem;
-    display: flex;
+    width: max-content;
 }
 
 .contact__form button i {
     font-size: 1.5rem; 
     font-weight: initial;
-    display: flex;
 }
 
 .contact__status {
