@@ -6,7 +6,6 @@
     --header-height: 3.5rem; 
 
     /* Colors */
-    /* Color mode HSL(hue, saturation, lightness) */
     --title-color: hsl(207, 4%, 16%);
     --text-color: hsl(207, 4%, 28%); 
     --text-color-light: hsl(207, 4%, 56%); 
@@ -764,6 +763,11 @@ body.dark-mode {
     color: var(--title-color);
 }
 
+.home__info-description {
+    text-decoration: none; 
+    -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on Apple devices */
+}
+
 /* .home__info-description {
     padding-right: 4rem;
 } */
@@ -1220,6 +1224,8 @@ body.dark-mode {
     font-size: var(--small-font-size); 
     font-family: var(--tiny-font); 
     color: var(--title-color);
+    text-decoration: none; 
+    -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on Apple devices */
 }
 
 .contact__button {
@@ -1296,6 +1302,8 @@ body.dark-mode {
 }
 .ri-download-2-line {
     font-size: var(--normal-font-size);
+    color: hsl(207, 4%, 16%);
+    -webkit-text-fill-color: hsl(207, 4%, 16%); /* to remain the desired text color on Apple devices */
 }
 /* end of download CV button */
 
