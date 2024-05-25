@@ -15,22 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- CSS Link -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- ScrollReveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-    <!-- SwiperJS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- EmailJS -->
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init({
-                publicKey: "JlD8T5SOu2dXKRnSW",
-            });
-        })();
-    </script>
+
     <title>Ryoichi Homma - Portfolio</title>
 </head>        
 
@@ -45,37 +30,31 @@
             <!-- Navigation Menu -->
             <div class="nav__menu" id="nav-menu"> 
                 <ul class="nav__list grid">
-                    <!-- Home Navigator -->
                     <li class="nav__item"> 
                         <a href="#home" class="nav__link active-link">
                             <i class="bi bi-house-fill"></i>Home
                         </a>
                     </li>
-                    <!-- Projects Navigator -->
                     <li class="nav__item"> 
                         <a href="#projects" class="nav__link">
                             <i class="bi bi-clipboard2-check-fill"></i>Projects
                         </a>
                     </li>
-                    <!-- Skills Navigator -->
                     <li class="nav__item"> 
                         <a href="#skills" class="nav__link">
                             <i class="ri-hand-coin-fill"></i>Skills
                         </a>
                     </li>
-                    <!-- Services Navigator -->
                     <li class="nav__item"> 
                         <a href="#services" class="nav__link">
                             <i class="ri-shake-hands-fill"></i>Services
                         </a>
                     </li>
-                    <!-- Credentials Navigator -->
                     <li class="nav__item"> 
                         <a href="#credentials" class="nav__link">
                             <i class="ri-award-fill"></i>Credentials
                         </a>
                     </li>
-                    <!-- Contact Navigator -->
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">
                             <i class="ri-send-plane-fill"></i>Contact
@@ -91,7 +70,7 @@
             <div class="nav__buttons">
                 <!-- Mode change button -->
                 <i class="ri-moon-fill change-mode" id="moonIcon"></i>
-                <!-- Toggle button -->
+                <!-- Toggle button to open nav menu -->
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-line"></i>
                 </div>
@@ -198,7 +177,7 @@
                         <h3 class="home__info-title">CONTACT</h3>
                         <p class="home__info-description"> 
                             <i class="ri-map-pin-line"></i>Kamloops, Canada<br>
-                            <i class="ri-phone-line"></i>+1 (250)-574-5624<br>
+                            <i class="ri-phone-line"></i>+1 (250) 574-5624<br>
                             <i class="ri-mail-line"></i>r.homma.inbox@gmail.com<br> 
                         </p> 
                     </div>
@@ -211,7 +190,7 @@
                     </div>
                     <div class="home__info-projects"> 
                         <h3 class="home__info-title">NUMBER OF PROJECTS</h3>
-                        <p class="home__info-number">05+</p>
+                        <p class="home__info-number">06+</p>
                     </div>
                     <div class="home__info-companies"> 
                         <h3 class="home__info-title">
@@ -226,15 +205,15 @@
         <!--********************* PROJECTS SECTION *********************-->
         <section class="projects section" id="projects"> 
             <h2 class="section__title">Projects</h2>
-            <span class="section__subtitle">Latest works</span>
+            <span class="section__subtitle">Most latest works</span>
 
             <div class="container section__border">
                 <div class="projects__container swiper">
                     <div class="swiper-wrapper">
                         <!-- PROJECT 1 -->
                         <div class="projects__content swiper-slide"> 
-                            <a href="https://ai-visual-doppelganger.onrender.com/" target="_blank">
-                                <img src="assets/img/proj1.jpg" alt="project image" class="projects__img">
+                            <a href="https://AiVisualDoppelganger.onrender.com/" target="_blank">
+                                <img src="assets/img/proj1.jpg" alt="project image" class="projects__img" loading="lazy">
                             </a>
                             <div>
                                 <span class="projects__subtitle">Image replication web app</span>
@@ -248,7 +227,7 @@
                                         <span>Source code</span>
                                         <i class="ri-github-line"></i>
                                     </a>
-                                    <a href="https://ai-visual-doppelganger.onrender.com/" target="_blank" class="projects__button">
+                                    <a href="https://AiVisualDoppelganger.onrender.com/" target="_blank" class="projects__button">
                                         <span>Live demo</span>
                                         <i class="bi bi-globe2"></i>
                                     </a> 
@@ -258,7 +237,7 @@
                         <!-- PROJECT 2 -->
                         <div class="projects__content swiper-slide">
                             <a href="https://youtu.be/N_yUfrnbgWI" target="_blank">
-                                <img src="assets/img/proj2.jpeg" alt="project image" class="projects__img">
+                                <img src="assets/img/proj2.jpeg" alt="project image" class="projects__img" loading="lazy">
                             </a>
                             <div>
                                 <span class="projects__subtitle">Food delivery app on Android</span>
@@ -268,7 +247,7 @@
                                         <span>Video demo</span>
                                         <i class="ri-youtube-line"></i>
                                     </a>    
-                                    <a href="#" class="projects__button">
+                                    <a href="https://github.com/Ryo-samurai6340/PlateMate-food-delivery-Android-app" target="_blank" class="projects__button">
                                         <span>Source code</span>
                                         <i class="ri-github-line"></i>
                                     </a>
@@ -278,7 +257,7 @@
                         <!-- PROJECT 3 -->
                         <div class="projects__content swiper-slide">
                             <a href="https://youtu.be/ayVUSVRPLqE" target="_blank">
-                                <img src="assets/img/proj3.png" alt="project image" class="projects__img">
+                                <img src="assets/img/proj3.png" alt="project image" class="projects__img" loading="lazy">
                             </a>
                             <div>
                                 <span class="projects__subtitle">Network infrastructure design</span>
@@ -302,7 +281,7 @@
                         <!-- PROJECT 4 -->
                         <div class="projects__content swiper-slide"> 
                             <a href="https://prezi.com/view/kiFUg0jNey3zD5mN1ctl/" target="_blank">
-                                <img src="assets/img/proj4.png" alt="project image" class="projects__img">
+                                <img src="assets/img/proj4.png" alt="project image" class="projects__img" loading="lazy">
                             </a>
                             <div>
                                 <span class="projects__subtitle">4+1 diagrams of food delivery system</span>
@@ -340,94 +319,83 @@
                         <i class="ri-crop-line"></i>Frontend & Web Design
                     </h3>
                     <div class="skills__info">
-                        <!-- HTML -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/html.png" alt="skills image">
+                                <img src="assets/img/html.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">HTML</h3>
                             <span class="skills__subtitle">Advanced</span>
                         </div>
-                        <!-- CSS -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/css.png" alt="skills image">
+                                <img src="assets/img/css.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">CSS</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
-                        <!-- JavaScript -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/js.png" alt="skills image">
+                                <img src="assets/img/js.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">JavaScript</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
-                        <!-- React -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/react.png" alt="skills image">
+                                <img src="assets/img/react.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">React</h3>
                             <span class="skills__subtitle">Basic</span>
                         </div>
-                        <!-- EmailJS -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/emailJS.png" alt="skills image">
+                                <img src="assets/img/emailJS.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">EmailJS</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
-                        <!-- Swiper -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/swiperJS.png" alt="skills image">
+                                <img src="assets/img/swiperJS.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">Swiper</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
-                        <!-- Scroll Reveal -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/scrollReveal.png" alt="skills image">
+                                <img src="assets/img/scrollReveal.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">ScrollReveal</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
-                        <!-- XML -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/xml.png" alt="skills image">
+                                <img src="assets/img/xml.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">XML</h3>
                             <span class="skills__subtitle">Basic</span>
                         </div>
-                        <!-- Figma -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/figma.png" alt="skills image">
+                                <img src="assets/img/figma.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">Figma</h3>
                             <span class="skills__subtitle">Basic</span>
                         </div>
-                        <!-- Google Fonts -->
-                        <div class="skills__data"> 
+                        <!-- <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/google-fonts.png" alt="skills image">
+                                <img src="assets/img/google-fonts.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">Google<br>Fonts</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
-                        <!-- Icon Libraries -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/fontAwesome.png" alt="skills image">
+                                <img src="assets/img/fontAwesome.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">Icon<br>Libraries</h3>
                             <span class="skills__subtitle">Advanced</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
@@ -437,84 +405,74 @@
                         <i class="ri-server-line"></i>Backend & Deployment Platforms
                     </h3>
                     <div class="skills__info">
-                        <!-- C Language -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/c.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">C</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-                        <!-- C# -->
-                        <div class="skills__data"> 
-                            <div class="skills__blob"> 
-                                <img src="assets/img/cSharp.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">C#</h3>
-                            <span class="skills__subtitle">Basic</span>
-                        </div>
-                        <!-- Java -->
-                        <div class="skills__data"> 
-                            <div class="skills__blob"> 
-                                <img src="assets/img/java.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">Java</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-                        <!-- Python -->
-                        <div class="skills__data"> 
-                            <div class="skills__blob"> 
-                                <img src="assets/img/python.png" alt="skills image">
+                                <img src="assets/img/python.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">Python</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
-                        <!-- Flask -->
                         <div class="skills__data">
                             <div class="skills__blob">
-                                <img src="assets/img/flask.png" alt="skills image">
+                                <img src="assets/img/flask.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">Flask</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
-                        <!-- Pillow -->
-                        <div class="skills__data"> 
+                        <!-- <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/pillow.png" alt="skills image">
+                                <img src="assets/img/pillow.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">Pillow</h3>
                             <span class="skills__subtitle">Basic</span>
-                        </div>
-                        <!-- MySQL -->
+                        </div> -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/mySQL.png" alt="skills image">
+                                <img src="assets/img/java.png" alt="skills image" loading="lazy">
+                            </div>
+                            <h3 class="skills__name">Java</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/c.png" alt="skills image" loading="lazy">
+                            </div>
+                            <h3 class="skills__name">C</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/cSharp.png" alt="skills image" loading="lazy">
+                            </div>
+                            <h3 class="skills__name">C#</h3>
+                            <span class="skills__subtitle">Basic</span>
+                        </div>
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/mySQL.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">MySQL</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
-                        <!-- Oracle SQL -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/oracle-sql.png" alt="skills image">
+                                <img src="assets/img/oracle-sql.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">Oracle SQL</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
-                        <!-- Render -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/render.png" alt="skills image">
+                                <img src="assets/img/netlify.svg" alt="skills image" loading="lazy">
                             </div>
-                            <h3 class="skills__name">Render</h3>
+                            <h3 class="skills__name">Netlify</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
-                        <!-- Zeet -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/zeet.png" alt="skills image">
+                                <img src="assets/img/render.png" alt="skills image" loading="lazy">
                             </div>
-                            <h3 class="skills__name">Zeet</h3>
+                            <h3 class="skills__name">Render</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
                     </div>
@@ -526,34 +484,30 @@
                         <i class="ri-organization-chart"></i>Diagramming & Networking Tools
                     </h3>
                     <div class="skills__info">
-                        <!-- Lucidchart -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/lucidchart.png" alt="skills image">
+                                <img src="assets/img/lucidchart.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">Lucidchart</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
-                        <!-- draw.io -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/draw-io.png" alt="skills image">
+                                <img src="assets/img/draw-io.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">draw.io</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
-                        <!-- ArgoUML -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/argouml.png" alt="skills image">
+                                <img src="assets/img/argouml.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">ArgoUML</h3>
                             <span class="skills__subtitle">Advanced</span>
                         </div>
-                        <!-- Cisco Packet Tracer -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/cisco.png" alt="skills image">
+                                <img src="assets/img/cisco.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">Cisco Packet<br>Tracer</h3>
                             <span class="skills__subtitle">Intermediate</span>
@@ -561,59 +515,68 @@
                     </div>
                 </div>
 
-                <!-- 4th category (AI & presentation tools) -->
+                <!-- 4th category (AI tools) -->
                 <div class="skills__content">
                     <h3 class="skills__title"> 
                         <i class="ri-robot-3-line"></i>AI Tools
                     </h3>
                     <div class="skills__info">
-                        <!-- GPT-3.5 -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/chatgpt.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">GPT-3.5</h3>
-                            <span class="skills__subtitle">Advanced</span>
-                        </div>
-                        <!-- Cursor -->
-                        <div class="skills__data"> 
-                            <div class="skills__blob"> 
-                                <img src="assets/img/cursor.png" alt="skills image">
+                                <img src="assets/img/cursor.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">Cursor</h3>
                             <span class="skills__subtitle">Intermediate</span>
                         </div>
-                        <!-- Microsoft Copilot -->
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/copilot.png" alt="skills image">
+                                <img src="assets/img/chatgpt.png" alt="skills image" loading="lazy">
                             </div>
-                            <h3 class="skills__name">Copilot</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-                        <!-- Perplexity -->
-                        <div class="skills__data"> 
-                            <div class="skills__blob"> 
-                                <img src="assets/img/perplexity.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">Perplexity</h3>
-                            <span class="skills__subtitle">Intermediate</span>
-                        </div>
-                        <!-- Prezi -->
-                        <div class="skills__data"> 
-                            <div class="skills__blob"> 
-                                <img src="assets/img/prezi.png" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">Prezi</h3>
+                            <h3 class="skills__name">ChatGPT</h3>
                             <span class="skills__subtitle">Advanced</span>
                         </div>
                         <div class="skills__data"> 
                             <div class="skills__blob"> 
-                                <img src="assets/img/veed.png" alt="skills image">
+                                <img src="assets/img/claude.png" alt="skills image" loading="lazy">
+                            </div>
+                            <h3 class="skills__name">Claude</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/copilot.png" alt="skills image" loading="lazy">
+                            </div>
+                            <h3 class="skills__name">Copilot</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/perplexity.png" alt="skills image" loading="lazy">
+                            </div>
+                            <h3 class="skills__name">Perplexity</h3>
+                            <span class="skills__subtitle">Intermediate</span>
+                        </div>
+                        <!-- <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/v0.png" alt="skills image" loading="lazy">
+                            </div>
+                            <h3 class="skills__name">v0</h3>
+                            <span class="skills__subtitle">Basic</span>
+                        </div> -->
+                        <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/prezi.png" alt="skills image" loading="lazy">
+                            </div>
+                            <h3 class="skills__name">Prezi</h3>
+                            <span class="skills__subtitle">Advanced</span>
+                        </div>
+                        <!-- <div class="skills__data"> 
+                            <div class="skills__blob"> 
+                                <img src="assets/img/veed.png" alt="skills image" loading="lazy">
                             </div>
                             <h3 class="skills__name">Veed</h3>
                             <span class="skills__subtitle">Intermediate</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -622,7 +585,7 @@
         <!--************************ SERVICES SECTION **************************-->
         <section class="services section" id="services"> 
             <h2 class="section__title">Services</h2>
-            <span class="section__subtitle">What I contribute to you</span>
+            <span class="section__subtitle">What I can contribute to your organization</span>
             <div class="services__container container grid section__border">
                 <!-- Service 1 (full-stack engineering) -->
                 <div class="service__card" id="web-development">
@@ -794,7 +757,7 @@
                                 </h3>
                                 <span class="credentials__location">Central Wellness Sports Club, Japan</span>
                                 <div class="credentials__duration">
-                                    <i class="bi bi-calendar-week"></i>Apr. 2022 - Aug. 2022 & 2023 (Seasonal)
+                                    <i class="bi bi-calendar-week"></i>Apr. - Aug. 2022 & 2023
                                 </div>
                             </div>
                             <div>
@@ -835,7 +798,7 @@
                             <span class="contact__data-title">
                                 <i class="bi bi-chat-dots-fill"></i>SMS
                             </span>
-                            <span class="contact__data-info">+1-250-574-5624</span>
+                            <span class="contact__data-info">+1 (250) 574-5624</span>
                             <a href="sms:+1250-574-5624" target="_blank" class="contact__button">
                                 <span>Text me</span>
                                 <i class="bi bi-feather"></i>
@@ -881,22 +844,22 @@
                     <form class="contact__form" id="contact-form">
                         <div class="contact__form-div">
                             <label class="contact__form-tag" for="contact-name">Name</label>
-                            <input name="sender_name" placeholder="Enter your name" class="contact__form-input" id="contact-name">
+                            <input type="text" name="sender_name" placeholder="Enter your name" class="contact__form-input" id="contact-name">
                         </div> 
                         <div class="contact__form-div">
                             <label class="contact__form-tag" for="contact-email">Email</label>
-                            <input name="sender_email" placeholder="Enter your email address" class="contact__form-input" id="contact-email">
+                            <input type="email" name="sender_email" placeholder="Enter your email address" class="contact__form-input" id="contact-email">
                         </div>
                         <div class="contact__form-div">
                             <label class="contact__form-tag" for="contact-subject">Subject</label>
-                            <input name="contact_subject" placeholder="Enter the subject" class="contact__form-input" id="contact-subject">
+                            <input type="text" name="contact_subject" placeholder="Enter the subject" class="contact__form-input" id="contact-subject">
                         </div> 
                         <div class="contact__form-div contact__form-area">
                             <label class="contact__form-tag" for="contact-content">Content</label>
                             <textarea name="contact_content" placeholder="Enter your inquiry" class="contact__form-input" id="contact-content"></textarea>
                         </div>
                         <p class="contact__status" id="contact-status"></p>
-                        <button class="contact__button">
+                        <button type="submit" class="contact__button">
                             <span>Submit</span>
                             <i class="ri-flight-takeoff-line"></i>
                         </button>
@@ -929,13 +892,13 @@
             <ul class="footer__social">
                 <li class="footer__social-item">
                     <a href="https://www.linkedin.com/" target="_blank" class="footer__social-link" title="my linkedin profile"> 
-                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                     <a href="https://github.com/" target="_blank" class="footer__social-link" title="my github profile"> 
-                        <i class="fa-brands fa-square-github"></i>
+                        <i class="fa-brands fa-github"></i>
                     </a>
                     <a href="https://discordapp.com/users/1233363421207199827" target="_blank" class="footer__social-link" title="my discord profile"> 
-                        <i class="bi bi-discord"></i>
+                        <i class="fa-brands fa-discord"></i>
                     </a>
                     <a href="https://www.youtube.com/@rh.project_gallery" target="_blank" class="footer__social-link" title="my youtube channel"> 
                         <i class="fa-brands fa-youtube"></i>
@@ -953,6 +916,22 @@
     <a href="#home" class="scrollup" id="scroll-up" title="scrollup icon">
         <i class="bi bi-hand-index-thumb"></i>
     </a>
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!-- SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "JlD8T5SOu2dXKRnSW",
+            });
+        })();
+    </script>
     <!-- MAIN -->
     <script src="assets/js/main.js"></script>
 </body>
