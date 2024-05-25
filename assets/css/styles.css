@@ -1219,7 +1219,7 @@ body.dark-mode {
 .contact__data-info {
     font-size: var(--small-font-size); 
     font-family: var(--tiny-font); 
-    color: var(--title-color) !important;  /* to make text color the same as the title color on Apple devices */
+    color: var(--title-color, initial);  /* to make text color the same as the title color on Apple devices */
 }
 
 .contact__button {
