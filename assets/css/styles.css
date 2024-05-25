@@ -765,12 +765,9 @@ body.dark-mode {
 
 .home__info-description {
     text-decoration: none; 
-    -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on Apple devices */
+    -webkit-text-decoration: none; /* to remove underline on Google Chrome, especially on iOS devices */
+    -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
 }
-
-/* .home__info-description {
-    padding-right: 4rem;
-} */
 
 .home__info-description i {
     margin-right: .25rem;
@@ -1224,8 +1221,9 @@ body.dark-mode {
     font-size: var(--small-font-size); 
     font-family: var(--tiny-font); 
     color: var(--title-color);
+    -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
     text-decoration: none; 
-    -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on Apple devices */
+    -webkit-text-decoration: none; /* to remove underline on Google Chrome, especially on iOS devices */
 }
 
 .contact__button {
@@ -1303,7 +1301,6 @@ body.dark-mode {
 .ri-download-2-line {
     font-size: var(--normal-font-size);
     color: hsl(207, 4%, 16%);
-    -webkit-text-fill-color: hsl(207, 4%, 16%); /* to remain the desired text color on Apple devices */
 }
 /* end of download CV button */
 
