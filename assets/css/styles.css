@@ -1383,7 +1383,6 @@ body.dark-mode {
 .contact__submit-button i {
     font-size: 1.5rem; 
     font-weight: initial;
-    display: inline-flex;
     transition: transform .3s;
     margin-left: .25rem;
 }
