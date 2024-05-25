@@ -1382,8 +1382,8 @@ body.dark-mode {
 }
 
 .contact__form .contact__submit-button i {
-    /* width: max-content; 
-    display: inline-block; */
+    width: max-content; 
+    display: inline-block;
     font-size: 1.5rem; 
     font-weight: initial;
 }
