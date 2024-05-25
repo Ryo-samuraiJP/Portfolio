@@ -1362,9 +1362,8 @@ body.dark-mode {
     resize: none;
 }
 
-.contact__form button {
-    /* width: max-content; */
-    display: inline-flex; 
+.contact__form .contact__submit-button {
+    width: max-content; 
     border: none; 
     background: none; 
     font-size: var(--h2-font-size); 
@@ -1375,16 +1374,9 @@ body.dark-mode {
     margin-top: .75rem;
 }
 
-.contact__form button i {
+.contact__form .contact__submit-button i {
     font-size: 1.5rem; 
     font-weight: initial;
-    margin-top: .15rem;
-    margin-left: .5rem;
-    transition: transform .3s;
-}
-
-.contact__form button:hover i {
-    transform: translateX(.25rem);
 }
 
 .contact__status {
