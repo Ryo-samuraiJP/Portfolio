@@ -772,15 +772,6 @@ body.dark-mode {
     color: var(--title-color);
 }
 
-.fa-feather, .fa-feather-pointed {
-    color: var(--text-color-light);
-}
-
-.contact__link:hover .fa-feather,
-.contact__link:hover .fa-feather-pointed {
-    color: var(--text-color);
-}
-
 
 /*************************** Project Section **************************/
 .projects__container {
