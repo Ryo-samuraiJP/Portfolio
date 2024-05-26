@@ -1364,7 +1364,6 @@ body.dark-mode {
     font-size: var(--small-font-size); 
     position: absolute; 
     bottom: 2.8rem; 
-    left: 1.5rem;
 }
 
 /* Message status color */ 
@@ -1388,7 +1387,6 @@ body.dark-mode {
     margin-top: .75rem;
     width: max-content; 
     display: inline-block; 
-    align-items: center;
     color: var(--title-color); 
 }
 
