@@ -35,12 +35,12 @@ function displaySentence() {
     var timeout;
 
     function typeSentence() {
-        if (index < sentence.length) {
+        if(index < sentence.length) {
             sentenceElement.innerHTML += sentence.charAt(index);
 
             // if the current character is a comma, add a line break
-            if (sentence.charAt(index) === ",") {
-                sentenceElement.innerHTML += "<br>"; // add line break
+            if(sentence.charAt(index) === ",") {
+                sentenceElement.innerHTML += "<br>"; 
                 index++; // move to the next character after the comma
             }
             timeout = setTimeout(typeSentence, 25); // delay between each character
@@ -52,11 +52,9 @@ function displaySentence() {
 
             // delay before clear the text to keep it visible for a few seconds
             setTimeout(function() {
-                sentenceElement.innerHTML = ""; // to clear the text
-
-                // restart typing animation
+                sentenceElement.innerHTML = "";
                 setTimeout(typeSentence, 0); // start repeating immediately after clear the text
-            }, 2000); // wait for 2 seconds before clear the text
+            }, 2000);
         }
     }
     typeSentence(); // start typing the sentence
@@ -107,7 +105,7 @@ tabs.forEach(tab => {
     });
 });
 
-// ************************* EmailJS Settings ***************************
+// ********************** Contact Form Settings *************************
 const contactForm = document.getElementById('contact-form'),
     contactName = document.getElementById('contact-name'),
     contactEmail = document.getElementById('contact-email'),
@@ -115,33 +113,58 @@ const contactForm = document.getElementById('contact-form'),
     contactContent = document.getElementById('contact-content'),
     contactStatus = document.getElementById('contact-status');
 
-const sendEmail = (e) => {
+// check if email domain is valid using Google DNS
+const validateEmailDomain = async (email) => {
+    const domain = email.split('@')[1]; 
+    try {
+        const response = await fetch(`https://dns.google.com/resolve?name=${domain}&type=MX`);
+        const data = await response.json(); 
+        return data.Answer && data.Answer.length > 0; 
+    }
+    catch (error) {
+        console.error(error);
+        return false; 
+    }
+}
+
+const sendEmail = async (e) => {
     e.preventDefault();
 
-    // check if the field has a value
+    // check if all input fields are filled
     if(contactName.value === '' || contactEmail.value === '' || contactSubject.value === '' || contactContent.value === '') {
         contactStatus.classList.add('color-red');
         contactStatus.classList.remove('color-blue');
-
-        // show error message if there is an empty field
-        contactStatus.textContent = 'Please fill all input fields ⚠️';
-
+        contactStatus.textContent = "Please fill all input fields ⚠️";
         setTimeout(() => {
             contactStatus.textContent = '';
         }, 5000);
     }
+    // check if input email is valid using Validator.js
+    else if(!validator.isEmail(contactEmail.value)) {
+        contactStatus.classList.add('color-red');
+        contactStatus.classList.remove('color-blue');
+        contactStatus.textContent = "Please enter a valid email address ⚠️";
+        setTimeout(() => {
+            contactStatus.textContent = '';
+        }, 5000);
+    }
+    // check if email domain is valid using Google DNS
+    else if(!await validateEmailDomain(contactEmail.value)) {
+        contactStatus.classList.add('color-red');
+        contactStatus.classList.remove('color-blue');
+        contactStatus.textContent = "Invalid email domain, please check if there's any typo ⚠️";
+        setTimeout(() => {
+            contactStatus.textContent = '';
+        }, 5000);    
+    }
     else {
         // service ID, Template ID, #contact-form, Public key
         emailjs.sendForm('service_b0glpz8', 'template_tm31dkp', '#contact-form', 'JlD8T5SOu2dXKRnSW').then(() => {
-            // show message if successfully submitted
             contactStatus.classList.add('color-blue');
-            contactStatus.textContent = 'Your message submitted ✅';
-
+            contactStatus.textContent = "Your inquiry submitted ✅";
         }, (error) => {
-            alert('OOPS! SOMETHING HAS FAILED...', error);
+            alert("OOPS! SOMETHING HAS FAILED...", error);
         });
-
-        // clear all input fields and remove message after 5 seconds
         setTimeout(() => {
             contactName.value = '';
             contactEmail.value = '';
@@ -173,19 +196,18 @@ const scrollActive = () => {
         }
 
         // const contactNavLink = document.querySelector('.nav__menu a[href="#contact"]');
-        // if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        // if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
         //     contactNavLink.classList.add('active-link');
-        // } else {
+        // }
+        // else {
         //     contactNavLink.classList.remove('active-link');
         // }
     });
 }
 window.addEventListener('scroll', scrollActive);
 
-// Show Scrollup 
 const scrollUp = () => {
     const scrollUp = document.getElementById('scroll-up');
-
     // when the scroll is higher than 350 viewport height, add the show-scroll class to teh a tag with the scrollup
     this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
                         : scrollUp.classList.remove('show-scroll');
@@ -204,7 +226,7 @@ const selectedIcon = localStorage.getItem('selected-icon');
 const getCurrentMode = () => document.body.classList.contains(darkMode) ? 'dark' : 'light';
 const getCurrentIcon = () => modeButton.classList.contains(iconMode) ? 'ri-moon-fill' : 'ri-sun-line';
 
-if (selectedMode) {
+if(selectedMode) {
 document.body.classList[selectedMode === 'dark' ? 'add' : 'remove'](darkMode);
 modeButton.classList[selectedIcon === 'ri-moon-fill' ? 'add' : 'remove'](iconMode);
 }
@@ -235,7 +257,7 @@ const sr = ScrollReveal({
     distance: '60px', 
     duration: 2500, 
     delay: 400, 
-    // reset: true /* Animations repeat */
+    reset: true
 });
 
 sr.reveal('.home__profile, .projects__container, .credentials__contents, .footer__container');
