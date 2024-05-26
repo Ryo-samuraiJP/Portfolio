@@ -757,7 +757,7 @@ body.dark-mode {
 
 .home__info-description {
     font-family: var(--title-font); 
-    /*-webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
+    -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
     color: var(--title-color);
 }
 
@@ -1222,7 +1222,7 @@ body.dark-mode {
     font-size: var(--small-font-size); 
     font-family: var(--tiny-font); 
     display: block;
-    /*-webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
+    -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
     color: var(--title-color);
 }
 
