@@ -152,7 +152,7 @@ const sendEmail = async (e) => {
     else if(!await validateEmailDomain(contactEmail.value)) {
         contactStatus.classList.add('color-red');
         contactStatus.classList.remove('color-blue');
-        contactStatus.textContent = "Invalid email domain, please check for typos ⚠️";
+        contactStatus.textContent = "Invalid email domain, check for typos ⚠️";
         setTimeout(() => {
             contactStatus.textContent = '';
         }, 5000);    
