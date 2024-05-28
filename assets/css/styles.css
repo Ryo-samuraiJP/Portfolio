@@ -611,23 +611,9 @@ body.dark-mode {
 .social-button a:hover::before {
     transform: skewX(45deg) translateX(-150px);
 }
-.social-button svg {
+/* .social-button svg {
     width: 3em;
-}
-#linkedin, 
-#github, 
-#youtube {
-    color: #4c4c4ccc; 
-    width: 32px; 
-    height: 32px;
-}
-#discord {
-    background-color: #4c4c4ccc; 
-    width: 32px; 
-    height: 32px;
-    border-radius: 7px;
-    color: #ffffffe1;   /* adjust needed after change color of 3D-profile card */
-}
+} */
 .social-button:first-child {
     transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s;
 }
@@ -643,33 +629,47 @@ body.dark-mode {
 .social-button:nth-child(5) {
     transition: transform 0.2s ease-in-out 1.2s, box-shadow 0.2s ease-in-out 1.2s;
 }
+#linkedin,
+#github,
+#discord, 
+#youtube {
+    background-color: #4c4c4ccc;
+    color: #ffffffe1;
+    /* width: 32px; 
+    height: 32px; */
+    border-radius: 6px;
+}
+/* filter color under icon when hover */
 .social-button:hover {
     background-color: rgba(204, 204, 204, 0.466);
     background: transparent;
 }
+/* icon colors when hover */
 .social-button:hover #linkedin {
-    color: var(--linkedin-color);
-    background-color: #fff;
-    border-radius: 6px;
+    color: #fff;
+    background-color: var(--linkedin-color);
+    /* border-radius: 6px; */
 }
 .social-button:hover #github {
-    color: var(--github-color);
-    background-color: #fff;
-    border-radius: 6px;
+    color: #fff;
+    background-color: var(--github-color);
+    /* border-radius: 6px; */
 }
 .social-button:hover #discord {
     color: #fff;
     background-color: var(--discord-color);
-    border-radius: 6px;
+    /* border-radius: 6px; */
 }
 .social-button:hover #youtube {
-    color: var(--youtube-color);
-    background-color: #fff;
-    border-radius: 6px;
+    color: #fff;
+    background-color: var(--youtube-color);
+    /* border-radius: 6px; */
 }
+/* filter color under icon when active */
 .social-button:active {
     background-color: rgba(160, 160, 160, 0.466);
 }
+/* outmost colors when active */
 .linkedin-button:active {
     background: var(--linkedin-color);
 }
@@ -682,22 +682,24 @@ body.dark-mode {
 .youtube-button:active {
     background: var(--youtube-color);
 }
+/* inside icon colors when active */
 .social-button:active #linkedin {
-    fill: #fff;
-    background: var(--linkedin-color);
+    color: var(--linkedin-color);
+    background-color: #fff;
 }
 .social-button:active #github{
-    fill: #fff;
-    background: var(--github-color);
+    color: var(--github-color);
+    background-color: #fff;
 }
 .social-button:active #discord {
+    color: var(--discord-color);
     background-color:  #fff;
-    fill: var(--discord-color);
 }
 .social-button:active #youtube {
-    fill: #fff;
-    background-color: var(--youtube-color);
+    color: var(--youtube-color);
+    background-color: #fff;
 }
+
 .home__profile:hover .social-button {
     transform: translate3d(0, 0, 50px);
     box-shadow: rgba(5, 71, 17, 0.2) -5px 20px 10px 0px;
