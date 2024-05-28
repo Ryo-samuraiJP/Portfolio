@@ -615,13 +615,13 @@ body.dark-mode {
     width: 3em;
 }
 #linkedin, 
-#github {
+#github, 
+#youtube {
     color: #4c4c4ccc; 
     width: 32px; 
     height: 32px;
 }
-#discord, 
-#youtube {
+#discord {
     background-color: #4c4c4ccc; 
     width: 32px; 
     height: 32px;
@@ -650,22 +650,22 @@ body.dark-mode {
 .social-button:hover #linkedin {
     color: var(--linkedin-color);
     background-color: #fff;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 .social-button:hover #github {
     color: var(--github-color);
     background-color: #fff;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 .social-button:hover #discord {
     color: #fff;
     background-color: var(--discord-color);
-    border-radius: 7px;
+    border-radius: 6px;
 }
 .social-button:hover #youtube {
-    color: #fff;
-    background-color: var(--youtube-color);
-    border-radius: 7px;
+    color: var(--youtube-color);
+    background-color: #fff;
+    border-radius: 6px;
 }
 .social-button:active {
     background-color: rgba(160, 160, 160, 0.466);
@@ -695,8 +695,8 @@ body.dark-mode {
     fill: var(--discord-color);
 }
 .social-button:active #youtube {
-    background-color: #fff;
-    fill: var(--youtube-color);
+    fill: #fff;
+    background-color: var(--youtube-color);
 }
 .home__profile:hover .social-button {
     transform: translate3d(0, 0, 50px);
