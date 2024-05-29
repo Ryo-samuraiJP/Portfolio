@@ -1248,6 +1248,7 @@ body.dark-mode {
     font-size: 1rem; 
     margin-left: .5rem;
     transition: transform .3s;
+    -webkit-text-fill-color: initial;
 }
 
 .contact__link:hover .bi-feather {
@@ -1266,7 +1267,7 @@ body.dark-mode {
     background: var(--sms-color);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
     font-weight: var(--font-medium);
 }
 
