@@ -1271,6 +1271,11 @@ body.dark-mode {
     font-weight: var(--font-medium);
 }
 
+.contact__link:hover .contact__data-title .fa-envelope,
+.contact__link:hover .contact__data-title .bi-chat-dots-fill {
+    color: transparent;
+}
+
 .contact__link.linkedin:hover .contact__data-title {
     color: var(--linkedin-color);
     font-weight: var(--font-medium);
