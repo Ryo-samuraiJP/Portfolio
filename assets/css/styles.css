@@ -1217,8 +1217,8 @@ body.dark-mode {
 .contact__data-title {
     font-size: var(--small-font-size); 
     color: var(--text-color-light);
-    /* position: relative;  */
-    display: inline-block;
+    position: relative; 
+    /* display: inline-block; */
 }
 
 .contact__data-title i {
