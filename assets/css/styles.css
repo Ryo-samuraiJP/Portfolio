@@ -1258,7 +1258,7 @@ body.dark-mode {
     background: var(--gmail-color);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
     font-weight: var(--font-medium);
 }
 
