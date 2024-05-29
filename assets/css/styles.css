@@ -1243,7 +1243,6 @@ body.dark-mode {
     color: var(--title-color);
 }
 
-
 .contact__data-text i {
     font-size: 1rem; 
     margin-left: .5rem;
@@ -1256,17 +1255,19 @@ body.dark-mode {
 
 .contact__link.email:hover .contact__data-title {
     background: var(--gmail-color);
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     font-weight: var(--font-medium);
 }
 
 .contact__link.sms:hover .contact__data-title {
     background: var(--sms-color);
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     font-weight: var(--font-medium);
 }
 
