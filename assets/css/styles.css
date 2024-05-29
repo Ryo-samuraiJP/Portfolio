@@ -1253,13 +1253,21 @@ body.dark-mode {
     transform: translateX(.25rem);
 }
 
-.contact__link.email:hover .contact__data-title {
+.contact__link.email:hover .contact__data-title::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: var(--gmail-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    font-weight: var(--font-medium);
+    /* font-weight: var(--font-medium); */
+    z-index: -1;
 }
 
 .contact__link.sms:hover .contact__data-title {
@@ -1271,11 +1279,6 @@ body.dark-mode {
     font-weight: var(--font-medium);
 }
 
-.contact__link:hover .contact__data-title .fa-envelope,
-.contact__link:hover .contact__data-title .bi-chat-dots-fill {
-    color: transparent;
-}
-
 .contact__link.linkedin:hover .contact__data-title {
     color: var(--linkedin-color);
     font-weight: var(--font-medium);
@@ -1284,6 +1287,11 @@ body.dark-mode {
 .contact__link.discord:hover .contact__data-title {
     color: var(--discord-color);
     font-weight: var(--font-medium);
+}
+
+.contact__data-title {
+    position: relative; 
+    display: inline-block;
 }
 
 /* Download CV button */
