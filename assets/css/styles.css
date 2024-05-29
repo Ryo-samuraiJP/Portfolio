@@ -1217,40 +1217,12 @@ body.dark-mode {
 .contact__data-title {
     font-size: var(--small-font-size); 
     color: var(--text-color-light);
+    position: relative; 
+    display: inline-block;
 }
 
 .contact__data-title i {
     margin-right: .5rem;
-}
-
-.contact__data-info {
-    font-size: var(--small-font-size); 
-    font-family: var(--tiny-font); 
-    display: block;
-    -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
-    color: var(--title-color);
-    margin-top: .75rem;
-}
-
-.contact__data-text {
-    display: inline-flex; 
-    margin-top: .75rem;
-    color: var(--text-color-light);
-}
-
-.contact__link:hover .contact__data-text {
-    text-decoration: underline;
-    color: var(--title-color);
-}
-
-.contact__data-text i {
-    font-size: 1rem; 
-    margin-left: .5rem;
-    transition: transform .3s;
-}
-
-.contact__link:hover .bi-feather {
-    transform: translateX(.25rem);
 }
 
 .contact__link.email:hover .contact__data-title {
@@ -1281,9 +1253,34 @@ body.dark-mode {
     font-weight: var(--font-medium);
 }
 
-.contact__data-title {
-    position: relative; 
-    display: inline-block;
+.contact__data-info {
+    font-size: var(--small-font-size); 
+    font-family: var(--tiny-font); 
+    display: block;
+    -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
+    color: var(--title-color);
+    margin-top: .75rem;
+}
+
+.contact__data-text {
+    display: inline-flex; 
+    margin-top: .75rem;
+    color: var(--text-color-light);
+}
+
+.contact__link:hover .contact__data-text {
+    text-decoration: underline;
+    color: var(--title-color);
+}
+
+.contact__data-text i {
+    font-size: 1rem; 
+    margin-left: .5rem;
+    transition: transform .3s;
+}
+
+.contact__link:hover .contact__data-text i {
+    transform: translateX(.25rem);
 }
 
 /* Download CV button */
