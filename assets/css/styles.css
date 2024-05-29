@@ -3,9 +3,8 @@
 
 /*************************** Variables CSS *****************************/
 :root {
-    --header-height: 3.5rem; 
-
-    /* Colors */
+    --header-height: 3.5rem;
+    
     --title-color: hsl(207, 4%, 16%);
     --text-color: hsl(207, 4%, 28%); 
     --text-color-light: hsl(207, 4%, 56%); 
@@ -26,6 +25,8 @@
     /* --facebook-color: #1877f2; */
     --discord-color: #5865f2;
     --youtube-color: #ff0000;
+    --gmail-color: linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853);
+    --sms-color: linear-gradient(330deg, #39ff5a, #218aff);
     --service__web-color: linear-gradient(295deg, hsl(61, 100%, 92%), rgb(123, 195, 255)); 
     --service__database-color: linear-gradient(295deg, hsl(0, 100%, 77%), rgb(168, 216, 255));
     --service__network-color: linear-gradient(295deg, hsl(277, 100%, 74%), rgb(166, 215, 255)); 
@@ -36,7 +37,6 @@
     --credentials-button__active-color: hsl(240, 72%, 73%);
     
     /* Font and typography */
-    /* .5rem = 8px | 1rem = 16px ... */
     --body-font: 'Roboto', sans-serif; 
     --title-font: 'Lora', serif;
     --biggest-font-size: 1.75rem; 
@@ -310,7 +310,7 @@ body.dark-mode {
     margin-right: .2rem;
 }
 
-.fa-baseball-bat-ball {
+.fa-solid.fa-baseball {
     margin-left: .2rem;
 }
 
@@ -1068,18 +1068,21 @@ body.dark-mode {
     }
 }
 
-.service__card p {
+.service__card-bottom {
+    display: flex;
+}
+
+.service__card-bottom p {
     margin-top: 2rem;
 }
 
-.service__card:hover p {
-    display: none;
-}
-
-.bi-search {
+.bx-search-alt-2 {
     margin-left: .5rem;
 }
 
+.service__card:hover .service__card-bottom {
+    display: none;
+}
 
 /************************** Credentials Section ************************/
 .credentials__tabs {
@@ -1204,6 +1207,13 @@ body.dark-mode {
     row-gap: .75rem;
 }
 
+.contact__link {
+    width: max-content; 
+    display: inline-block; 
+    color: var(--title-color); 
+    font-size: var(--small-font-size);
+}
+
 .contact__data-title {
     font-size: var(--small-font-size); 
     color: var(--text-color-light);
@@ -1213,29 +1223,26 @@ body.dark-mode {
     margin-right: .5rem;
 }
 
-.contact__link {
-    width: max-content; 
-    display: inline-block; 
-    color: var(--title-color); 
-    font-size: var(--small-font-size);
-}
-
 .contact__data-info {
     font-size: var(--small-font-size); 
     font-family: var(--tiny-font); 
     display: block;
     -webkit-text-fill-color: var(--title-color);  /* to remain the desired text color on iOS devices */
     color: var(--title-color);
+    margin-top: .75rem;
 }
 
 .contact__data-text {
     display: inline-flex; 
     margin-top: .75rem;
+    color: var(--text-color-light);
 }
 
 .contact__link:hover .contact__data-text {
     text-decoration: underline;
+    color: var(--title-color);
 }
+
 
 .contact__data-text i {
     font-size: 1rem; 
@@ -1243,8 +1250,34 @@ body.dark-mode {
     transition: transform .3s;
 }
 
-.contact__link:hover i {
+.contact__link:hover .bi-feather {
     transform: translateX(.25rem);
+}
+
+.contact__link.email:hover .contact__data-title {
+    background: var(--gmail-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: var(--font-medium);
+}
+
+.contact__link.sms:hover .contact__data-title {
+    background: var(--sms-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: var(--font-medium);
+}
+
+.contact__link.linkedin:hover .contact__data-title {
+    color: var(--linkedin-color);
+    font-weight: var(--font-medium);
+}
+
+.contact__link.discord:hover .contact__data-title {
+    color: var(--discord-color);
+    font-weight: var(--font-medium);
 }
 
 /* Download CV button */
@@ -1298,7 +1331,7 @@ body.dark-mode {
 }
 .ri-download-2-line {
     font-size: var(--normal-font-size);
-    color: hsl(207, 4%, 16%);
+    /* color: hsl(207, 4%, 16%); */
 }
 /* end of download CV button */
 
@@ -1515,6 +1548,10 @@ body.dark-mode {
     color: var(--text-color);
     z-index: var(--z-tooltip); 
     transition: bottom .3s, transform .3s;
+    height: 35px;
+    width: 23px;
+    display: flex; 
+    justify-content: center;
 }
 
 .scrollup:hover {
@@ -1523,6 +1560,10 @@ body.dark-mode {
     color: var(--title-color);
     background-color: var(--text-color-light);
     box-shadow: 0 4px 12px var(--text-color);
+}
+
+.scrollup i {
+    margin-top: .85rem;
 }
 
 /* Show scroll up */
@@ -1638,6 +1679,10 @@ body.dark-mode {
         margin-top: -12rem; 
         margin-bottom: 3rem;
     }
+    .bx-search-alt-2 {
+        margin-top: 2rem;
+        font-size: var(--h2-font-size);
+    }
 
     .credentials__tabs {
         column-gap: 4rem;
@@ -1682,7 +1727,7 @@ body.dark-mode {
     }
     .contact__data-title, 
     .contact__data-title i {
-        font-size: var(--middle-font-size);
+        font-size: var(--normal-font-size);
     }
     .download__button-container {
         margin-top: 2rem;
@@ -1806,6 +1851,10 @@ body.dark-mode {
         margin-top: -12rem; 
         margin-bottom: 3rem;
     }
+    .bx-search-alt-2 {
+        margin-top: 2rem;
+        font-size: var(--h2-font-size);
+    }
 
     .credentials__tabs {
         column-gap: 5rem;
@@ -1846,7 +1895,7 @@ body.dark-mode {
     }
     .contact__data-title, 
     .contact__data-title i {
-        font-size: var(--middle-font-size);
+        font-size: var(--normal-font-size);
     }
     .download__button-container {
         margin-top: 2rem;
@@ -2464,6 +2513,10 @@ body.dark-mode {
     }
     .service__card:hover svg {
         margin-top: -14rem; 
+    }
+    .bx-search-alt-2 {
+        margin-top: 2rem;
+        font-size: var(--h3-font-size);
     }
 
     .credentials__tabs {
