@@ -19,11 +19,11 @@
     --circle-color: rgba(0, 249, 203, 0.2);
     --profile__text-color: rgba(1, 105, 96, 0.89);
     --profile__shadow-color: rgba(5, 45, 71, 0.537) 40px 50px 25px -40px, rgba(5, 36, 71, 0.2) 0px 50px 250px -5px;
-    --linkedin-color: #0274b3;
-    --github-color: #000;
-    --github-color2: #6e5494;
+    --linkedin-color: #0e76a8;
+    --github-color: #181717;
+    --github-desktop-color: #6e5494;
     /* --facebook-color: #1877f2; */
-    --discord-color: #5865f2;
+    --discord-color: #7289da;
     --youtube-color: #ff0000;
     --gmail-color: linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853);
     --sms-color: linear-gradient(330deg, #39ff5a, #218aff);
@@ -1495,7 +1495,7 @@ body.dark-mode {
 }
 
 .footer__social-link .fa-github:hover {
-    color: var(--github-color2);
+    color: var(--github-desktop-color);
 }
 
 .footer__social-link .fa-discord:hover {
