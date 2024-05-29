@@ -1426,14 +1426,12 @@ body.dark-mode {
 }
 
 .contact__form button i {
-    font-size: 1.5rem; 
     font-weight: initial;
     display: inline-flex; 
-    transition: transform .3s;
 }
 
-.contact__form button:hover i {
-    transform: translateX(.4rem);
+.contact__form button:hover {
+    text-decoration: underline;
 }
 
 
@@ -1548,8 +1546,8 @@ body.dark-mode {
     color: var(--text-color);
     z-index: var(--z-tooltip); 
     transition: bottom .3s, transform .3s;
-    height: 35px;
-    width: 23px;
+    height: 30px;
+    width: 20px;
     display: flex; 
     justify-content: center;
 }
@@ -1563,7 +1561,8 @@ body.dark-mode {
 }
 
 .scrollup i {
-    margin-top: .85rem;
+    margin-top: .75rem;
+    font-size: var(--middle-font-size);
 }
 
 /* Show scroll up */
