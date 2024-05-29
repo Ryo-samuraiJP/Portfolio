@@ -1253,21 +1253,13 @@ body.dark-mode {
     transform: translateX(.25rem);
 }
 
-.contact__link.email:hover .contact__data-title::before {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.contact__link.email:hover .contact__data-title {
     background: var(--gmail-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    /* font-weight: var(--font-medium); */
-    z-index: -1;
+    font-weight: var(--font-medium);
 }
 
 .contact__link.sms:hover .contact__data-title {
