@@ -218,13 +218,13 @@ window.addEventListener('scroll', scrollUp);
 // ************************ Dark / Light Mode Settings ************************
 const modeButton = document.getElementById('moonIcon');
 const darkMode = 'dark-mode';
-const iconMode = 'ri-sun-fill';
+const iconMode = 'bi-sun-fill';
 
 const selectedMode = localStorage.getItem('selected-mode');
 const selectedIcon = localStorage.getItem('selected-icon');
 
 const getCurrentMode = () => document.body.classList.contains(darkMode) ? 'dark' : 'light';
-const getCurrentIcon = () => modeButton.classList.contains(iconMode) ? 'ri-moon-fill' : 'ri-sun-line';
+const getCurrentIcon = () => modeButton.classList.contains(iconMode) ? 'ri-moon-fill' : 'bi-sun-fill';
 
 if(selectedMode) {
 document.body.classList[selectedMode === 'dark' ? 'add' : 'remove'](darkMode);
@@ -237,7 +237,16 @@ modeButton.addEventListener('click', () => {
     document.body.classList.toggle(darkMode);
     modeButton.classList.toggle(iconMode);
 
-    // to save the mode and the current icon that the user chose
+    // setting icon animation based on mode
+    modeButton.classList.remove('bx-tada', 'bx-spin');
+    if(document.body.classList.contains(darkMode)) {  // if dark mode, spin sun icon
+        modeButton.classList.add('bx-spin');
+    }
+    else {
+        modeButton.classList.add('bx-tada'); // if light mode, tada moon icon
+    }
+
+    // to save the mode and the current icon based on chosen mode
     localStorage.setItem('selected-mode', getCurrentMode());
     localStorage.setItem('selected-icon', getCurrentIcon());
 });
