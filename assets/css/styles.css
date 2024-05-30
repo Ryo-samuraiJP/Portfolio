@@ -142,6 +142,10 @@ img {
     color: var(--title-color);
 }
 
+.hide-modeIcon {
+    visibility: hidden;
+}
+
 /* Variables for Dark Mode */
 body.dark-mode {
     --title-color: hsl(207, 4%, 95%);
@@ -1308,14 +1312,18 @@ body.dark-mode {
 }
 .download__button .download__button-icon {
     position: absolute;
-    transform: translateX(110px);
+    right: 0;
     transition: all 0.4s;
     height: 100%;
     width: 35px;
     background-color: #dedede;
     display: flex;
-    align-items: center;
     justify-content: center;
+}
+.download__button-icon i {
+    font-size: 20px;
+    margin-top: -.12rem;
+    color: hsl(207, 4%, 16%);
 }
 .download__button:hover {
     background: var(--container-color);
@@ -1324,16 +1332,14 @@ body.dark-mode {
     color: transparent;
 }
 .download__button:hover .download__button-icon {
-    width: 150px;
-    transform: translateX(0);
+    width: 100%;
 }
 .download__button:active {
-    transform: translate(3px, 3px);
+    transform: translate(1px, 3px);
     box-shadow: 0px 0px var(--text-color);
 }
-.ri-download-2-line {
-    font-size: var(--normal-font-size);
-    /* color: hsl(207, 4%, 16%); */
+.download__button:hover .download__button-icon i {
+    font-weight: var(--font-semi-bold);
 }
 /* end of download CV button */
 
@@ -1408,7 +1414,6 @@ body.dark-mode {
     color: hsl(4, 71%, 50%);
     font-weight: bold;
 }
-
 .color-blue {
     color: hsl(207, 56%, 45%);
 }
@@ -1427,15 +1432,18 @@ body.dark-mode {
     color: var(--title-color); 
 }
 
-.contact__form button i {
+/* .contact__form button i {
     font-weight: initial;
     display: inline-flex; 
-}
+} */
 
 .contact__form button:hover {
     text-decoration: underline;
 }
 
+.contact__form button:hover i {
+    font-weight: var(--font-semi-bold);
+}
 
 /******************************** Footer ******************************/
 .footer__container {
@@ -1556,18 +1564,16 @@ body.dark-mode {
 
 .scrollup:hover {
     transform: translateY(-.25rem);
-    font-weight: bold;
     color: var(--title-color);
     background-color: var(--text-color-light);
     box-shadow: 0 4px 12px var(--text-color);
 }
 
 .scrollup i {
-    margin-top: .75rem;
+    margin-top: .85rem;
     font-size: var(--middle-font-size);
 }
 
-/* Show scroll up */
 .show-scroll {
     bottom: 7rem;
 }
