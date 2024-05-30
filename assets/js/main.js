@@ -7,13 +7,14 @@ const navMenu = document.getElementById('nav-menu'),
 if(navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu');
+        modeButton.classList.toggle('hide-modeIcon');
     });
 }
-
 // HIDE MENU: validate if constant exists
 if(navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu');
+        modeButton.classList.toggle('hide-modeIcon');
     });
 }
 
