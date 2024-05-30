@@ -112,7 +112,8 @@ const contactForm = document.getElementById('contact-form'),
     contactEmail = document.getElementById('contact-email'),
     contactSubject = document.getElementById('contact-subject'),
     contactContent = document.getElementById('contact-content'),
-    contactStatus = document.getElementById('contact-status');
+    contactStatus = document.getElementById('contact-status'), 
+    flightIcon = document.getElementById('flight-icon');
 
 // check if email domain is valid using Google DNS
 const validateEmailDomain = async (email) => {
@@ -163,6 +164,7 @@ const sendEmail = async (e) => {
         emailjs.sendForm('service_b0glpz8', 'template_tm31dkp', '#contact-form', 'JlD8T5SOu2dXKRnSW').then(() => {
             contactStatus.classList.add('color-blue');
             contactStatus.textContent = "Your inquiry submitted ✅";
+            flightIcon.classList.add('take-off');   // add take off animation to the flight icon
         }, (error) => {
             alert("OOPS! SOMETHING HAS FAILED...", error);
         });
@@ -172,7 +174,8 @@ const sendEmail = async (e) => {
             contactSubject.value = '';
             contactContent.value = '';
             contactStatus.textContent = '';
-        }, 5000);
+            flightIcon.classList.remove('take-off');
+        }, 7000);
     }
 }
 contactForm.addEventListener('submit', sendEmail);

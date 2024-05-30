@@ -1416,6 +1416,7 @@ body.dark-mode {
 }
 .color-blue {
     color: hsl(207, 56%, 45%);
+    font-weight: bold;
 }
 
 .contact__form button {
@@ -1443,6 +1444,29 @@ body.dark-mode {
 
 .contact__form button:hover i {
     font-weight: var(--font-semi-bold);
+}
+
+@keyframes takeOffAnimation {
+    0% {
+        font-size: var(--h2-font-size);
+    }
+    15% {
+        font-size: var(--h1-font-size);
+    }
+    30% {
+        font-size: var(--biggest-font-size);
+    }
+    90% {
+        transform: translate(800px, -250px);
+    }
+    100% {
+        font-size: var(--tiny-font-size);
+    }
+}
+
+#flight-icon.take-off {
+    animation: takeOffAnimation 7s linear forwards;
+    transition: font-size .5s;
 }
 
 /******************************** Footer ******************************/
