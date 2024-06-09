@@ -1034,34 +1034,36 @@ body.dark-mode {
 }
 
 .service__description {
-    opacity: 0;
-    display: flex;
+    /* opacity: 0; */
+    display: none;
     text-align: center;
     color: var(--title-color); 
     font-size: var(--tiny-font-size);
 }
 
 .service__card:hover .service__description {
-    opacity: 1;
+    /* opacity: 1; */
+    display: flex;
     font-size: var(--h3-font-size);
     transform: translateY(-10px);
     transition: transform 0.5s;
+    margin-top: 2rem;
 }
 
 .service__card svg { 
-    width: 5rem; 
-    height: 5rem;
+    width: 8rem; 
+    height: 8rem;
     fill: var(--title-color); 
     transition: 0.2s ease-in-out;
-    margin-top: -2.5rem;
+    margin-top: 2.5rem;
 }
 
 .service__card:hover svg {
-    width: 19rem; 
-    height: 19rem;
+    width: 13rem; 
+    height: 13rem;
     filter: blur(7px); 
     animation: rotate-animation__service__card-svg 3s infinite;
-    margin-top: -6.5rem;
+    margin-top: -11.5rem;
     fill: var(--service__svg-color);
 
 }
@@ -1087,6 +1089,7 @@ body.dark-mode {
 
 .bx-search-alt-2 {
     margin-left: .5rem;
+    margin-top: 2.15rem;
 }
 
 .service__card:hover .service__card-bottom {
@@ -1708,21 +1711,25 @@ body.dark-mode {
     .service__card {
         width: 90%;
     }
-    .service__description {
+    /* .service__description {
         margin: 2rem .5rem 0 .5rem;
+    } */
+    .service__card:hover .service__description {
+        margin-top: 3rem;
     }
     .service__card:hover {
         width: 100%;
     }
-    .service__card svg {
+    /* .service__card svg {
         width: 15rem;
         height: 15rem;
+        margin-top: -2.5rem;
         margin-bottom: 2rem;
-    }
-    .service__card:hover svg {
+    } */
+    /* .service__card:hover svg {
         margin-top: -12rem; 
         margin-bottom: 3rem;
-    }
+    } */
     .bx-search-alt-2 {
         margin-top: 2rem;
         font-size: var(--h2-font-size);
@@ -1888,21 +1895,25 @@ body.dark-mode {
     .service__card {
         width: 90%;
     }
-    .service__description {
+    /* .service__description {
         margin: 3rem 1rem 0rem 1rem;
+    } */
+    .service__card:hover .service__description {
+        margin-top: 3rem;
     }
     .service__card:hover {
         width: 100%;
     }
-    .service__card svg {
+    /* .service__card svg {
         width: 8rem;
         height: 8rem;
+        margin-top: -2.5rem;
         margin-bottom: 2rem;
-    }
-    .service__card:hover svg {
+    } */
+    /* .service__card:hover svg {
         margin-top: -12rem; 
         margin-bottom: 3rem;
-    }
+    } */
     .bx-search-alt-2 {
         margin-top: 2rem;
         font-size: var(--h2-font-size);
@@ -2037,14 +2048,18 @@ body.dark-mode {
         width: 95%;
         height: 280px;
     }
-    .service__description {
+    /* .service__description {
         margin-top: 1.5rem;
+    } */
+    .service__card:hover .service__description {
+        margin-top: 1rem;
     }
     .service__card svg {
-        margin: -4rem 0 0 0;
+        /* margin: -4rem 0 0 0; */
+        margin: 0;
     }
     .service__card:hover svg {
-        margin-top: -14rem; 
+        margin-top: -13rem; 
         margin-bottom: 1.5rem;
     }
 
@@ -2227,8 +2242,11 @@ body.dark-mode {
         margin-right: 0;
     }
 
-    .service__card svg {
+    /* .service__card svg {
         margin-top: -2.75rem;
+    } */
+    .service__card:hover svg {
+        margin-top: -10rem; 
     }
 
     .credentials__button, 
@@ -2557,12 +2575,15 @@ body.dark-mode {
         width: 250px; 
         height: 350px;
     }
-    .service__description {
+    .service__name {
+        font-size: var(--h2-font-size);
+    }
+    /* .service__description {
         margin-top: 0;
-    }
-    .service__card svg {
+    } */
+    /* .service__card svg {
         margin-top: -4rem;
-    }
+    } */
     .service__card:hover {
         width: 250px; 
         height: 350px;
@@ -2573,7 +2594,7 @@ body.dark-mode {
     }
     .service__card:hover .service__description {
         font-size: var(--normal-font-size);
-        margin: 2.25rem .25rem 0rem .25rem;
+        margin: 2rem .25rem 0rem .25rem;
     }
     .service__card:hover svg {
         margin-top: -14rem; 
@@ -2747,9 +2768,9 @@ body.dark-mode {
         width: 265px; 
         height: 370px;
     }
-    .service__name {
+    /* .service__name {
         font-size: var(--h2-font-size);
-    }
+    } */
     .service__card:hover .service__name {
         font-size: var(--h2-font-size);
     }
