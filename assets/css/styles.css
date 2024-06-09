@@ -1304,6 +1304,9 @@ body.dark-mode {
 }
 
 /* Download CV button */
+.download__button-container {
+    margin-top: 2rem;
+}
 .download__button-container,
 .download__button {
     position: relative;
@@ -1789,9 +1792,9 @@ body.dark-mode {
     .contact__data-title i {
         font-size: var(--normal-font-size);
     }
-    .download__button-container {
+    /* .download__button-container {
         margin-top: 2rem;
-    }
+    } */
 
     .footer__subtitle {
         font-size: var(--middle-font-size);
@@ -1970,9 +1973,9 @@ body.dark-mode {
     .contact__data-title i {
         font-size: var(--normal-font-size);
     }
-    .download__button-container {
+    /* .download__button-container {
         margin-top: 2rem;
-    }
+    } */
 
     .footer__subtitle {
         font-size: var(--middle-font-size);
