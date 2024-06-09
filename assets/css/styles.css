@@ -19,12 +19,14 @@
     --circle-color: rgba(0, 249, 203, 0.2);
     --profile__text-color: rgba(1, 105, 96, 0.89);
     --profile__shadow-color: rgba(5, 45, 71, 0.537) 40px 50px 25px -40px, rgba(5, 36, 71, 0.2) 0px 50px 250px -5px;
+    --profile__social-default-color: #4c4c4ccc;
     --linkedin-color: #0e76a8;
     --github-color: #181717;
     --github-desktop-color: #6e5494;
     /* --facebook-color: #1877f2; */
     --discord-color: #7289da;
     --youtube-color: #ff0000;
+    --dev-color: #0a0a0a;
     --gmail-color: linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853);
     --sms-color: linear-gradient(330deg, #39ff5a, #218aff);
     --service__web-color: linear-gradient(295deg, hsl(61, 100%, 92%), rgb(123, 195, 255)); 
@@ -551,7 +553,7 @@ body.dark-mode {
     transform: translate3d(0, 0, 26px);
 }
 /* Social link buttons content of profile 3D-card */
-.social-buttons-container {
+.social__buttons-container {
     display: flex;
     flex-wrap: wrap;
     column-gap: 10px;
@@ -560,7 +562,7 @@ body.dark-mode {
     width: 63%;
 
 }
-.social-buttons-container .social-button {
+.social__buttons-container .social-button {
     width: 45px;
     height: 45px;
     aspect-ratio: 1;
@@ -637,7 +639,7 @@ body.dark-mode {
 #github,
 #discord, 
 #youtube {
-    background-color: #4c4c4ccc;
+    background-color: var(--profile__social-default-color);
     color: #ffffffe1;
     /* width: 32px; 
     height: 32px; */
@@ -709,7 +711,7 @@ body.dark-mode {
     box-shadow: rgba(5, 71, 17, 0.2) -5px 20px 10px 0px;
 }
 /* Download CV button in 3D-profile card */
-.download-button-container {
+.dev__button-container {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -717,33 +719,40 @@ body.dark-mode {
     padding: 1rem 1rem .5rem 1rem;
     border-radius: 2rem;
     margin: 0 -1rem -3rem 0;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
-.download-button-container:hover {
+.dev__button-container:hover {
     transform: translate3d(0, 0, 15px);
     border: .5px solid var(--profile__text-color);
     box-shadow: rgba(5, 71, 17, 0.2) -5px 20px 10px 0px;
 }
-.download-button-container:active {
+.dev__button-container:active {
     background-color: var(--circle-color);
     transform: translateY(.05px);
     transition: transform .1s;
 }
-.download-button {
+.dev__button {
     background: none;
     border: none;
-    color: var(--profile__text-color);
     font-weight: bolder;
     font-size: var(--smaller-font-size);
 }
-.button__text {
-    font-size: var(--small-font-size);
+.dev__button:hover {
+    cursor: pointer;
 }
-.button__icon .svg {
-    fill: none;
-    stroke: var(--profile__text-color);
-    stroke-width: 3px;
-    max-height: 15px;
+.dev__button-text {
+    font-size: var(--middle-font-size);
+    color: var(--profile__social-default-color);
+}
+.dev__button-container:hover .dev__button-text {
+    color: var(--profile__text-color);
+}
+.dev__button-icon svg {
+    color: var(--profile__social-default-color);
+    max-height: 3rem;
+}
+.dev__button-container:hover .dev__button-icon svg {
+    color: var(--dev-color);
 }
 /* end of 3D-profile card */
 
@@ -1639,7 +1648,7 @@ body.dark-mode {
         /* width: 79.5% if include facebook icon */
         margin: 0 0 -0.5rem -0.5rem;
     }
-    .social-buttons-container .social-button, 
+    .social__buttons-container .social-button, 
     .social-button a {
         width: 35px;
         height: 35px;
@@ -1651,8 +1660,12 @@ body.dark-mode {
         width: 25px; 
         height: 25px;
     }
-    .download-button-container {
-        margin-right: -4rem;
+    .dev__button-container {
+        margin-right: -5rem;
+        margin-top: -2.5rem;
+    }
+    .dev__button-text {
+        font-size: var(--small-font-size);
     }
     .home__info {
         margin-left: .5rem;
@@ -1808,7 +1821,7 @@ body.dark-mode {
         margin: 0 0 0 -0.5rem;
         width: 70%;
     }
-    .social-buttons-container .social-button, 
+    .social__buttons-container .social-button, 
     .social-button a {
         width: 40px;
         height: 40px;
@@ -1820,10 +1833,14 @@ body.dark-mode {
         width: 27px; 
         height: 27px;
     }
-    .download-button-container {
-        margin-right: -4rem;
+    .dev__button-container {
+        margin-right: -4.5rem;
+        margin-top: -1.5rem;
     }
-    .social-buttons-container {
+    .dev__button-text {
+        font-size: var(--small-font-size);
+    }
+    .social__buttons-container {
         column-gap: 15px;
     }
     .home__info {
@@ -1978,7 +1995,7 @@ body.dark-mode {
         width: 69.5%;
         margin: 0 0 0 -0.5rem;
     }
-    .social-buttons-container .social-button, 
+    .social__buttons-container .social-button, 
     .social-button a {
         width: 45px;
         height: 45px;
@@ -1990,11 +2007,12 @@ body.dark-mode {
         width: 30px; 
         height: 30px;
     }
-    .download-button-container {
+    .dev__button-container {
         margin-right: -5rem;
+        margin-top: -1rem;
     }
-    .button__text {
-        font-size: var(--normal-font-size);
+    .dev__button-text {
+        font-size: var(--middle-font-size);
     }
 
     .projects__img {
@@ -2074,6 +2092,13 @@ body.dark-mode {
     }
     .profile__card-bottom {
         width: 69%;
+    }
+    .dev__button-container {
+        margin-right: -5.5rem;
+        margin-top: -1.5rem;
+    }
+    .dev__button-text {
+        font-size: var(--normal-font-size);
     }
     .home__info {
         margin-left: 0;
@@ -2155,7 +2180,7 @@ body.dark-mode {
         width: 62%;
         margin: 1rem 0 .5rem .25rem;
     }
-    .download-button-container {
+    .dev__button-container {
         margin-right: -6.5rem;
     }
     .home__info:nth-child(2) {
@@ -2372,6 +2397,10 @@ body.dark-mode {
     .home__info:nth-child(3) {
         margin-right: 1.75rem;
     }
+    .dev__button-container {
+        margin-right: -7.5rem;
+        margin-top: -1rem;
+    }
 
     .projects__container {
         width: 80%;
@@ -2474,8 +2503,9 @@ body.dark-mode {
         width: 57.5%;
         margin: 0 0 .5rem 0.5rem;
     }
-    .download-button-container {
+    .dev__button-container {
         margin-right: -8rem;
+        margin-top: -2rem;
     }
     .home__info:nth-child(2) {
         margin-left: 1rem;
@@ -2642,6 +2672,9 @@ body.dark-mode {
     }
     .profile__card-description {
         margin-top: 1.5rem;
+    }
+    .dev__button-container {
+        margin-right: -9rem;
     }
     .home__info:nth-child(2) {
         row-gap: 3rem;
