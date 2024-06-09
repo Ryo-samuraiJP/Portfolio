@@ -1950,7 +1950,7 @@ body.dark-mode {
     }
     .credentials__data:nth-child(1) {
         /* margin-left: .5rem; */
-        margin-right: .25rem;
+        margin-right: .5rem;
     }
     .credentials__data:nth-child(3) {
         margin-left: 1.25rem;
@@ -2083,7 +2083,6 @@ body.dark-mode {
     }
     .credentials__data:nth-child(1) {
         margin-left: .75rem;
-        margin-right: 0.5rem;
     }
     .credentials__data:nth-child(3) {
         margin-left: 1.5rem;
