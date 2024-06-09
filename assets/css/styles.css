@@ -1501,11 +1501,12 @@ body.dark-mode {
 }
 
 .footer__subtitle {
-    /* font-size: var(--normal-font-size); */
-    grid-template-columns: repeat(5, max-content);
+    font-size: var(--small-font-size);
+    /* grid-template-columns: repeat(5, max-content); */
     justify-content: center;
     column-gap: 2.5rem;
     font-style: italic;
+    margin-bottom: 2rem;
 }
 
 .footer__list-item, 
@@ -1799,7 +1800,7 @@ body.dark-mode {
     .footer__subtitle {
         font-size: var(--middle-font-size);
         grid-template-columns: auto;
-        margin-bottom: 2rem;
+        /* margin-bottom: 2rem; */
     }
     .footer__list-item {
         column-gap: 1.5rem;
@@ -1980,7 +1981,7 @@ body.dark-mode {
     .footer__subtitle {
         font-size: var(--middle-font-size);
         grid-template-columns: auto;
-        margin-bottom: 2rem;
+        /* margin-bottom: 2rem; */
     }
     .footer__list-item {
         margin-bottom: 3.5rem;
