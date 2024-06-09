@@ -420,11 +420,8 @@ body.dark-mode {
 }
 @keyframes rotate-animation__profile__card {
     0% {
-        transform: rotate3d(0) rotateY(0);
+        transform: rotate3d(0);
     }
-    /* 5% {
-        transform: rotateY(360deg);
-    } */
     50% {
         transform: rotate3d(1, 1, 0, 35deg);
     }
@@ -560,7 +557,6 @@ body.dark-mode {
     row-gap: 15px;
     transform-style: preserve-3d;
     width: 63%;
-
 }
 .social__buttons-container .social-button {
     width: 45px;
@@ -641,8 +637,8 @@ body.dark-mode {
 #youtube {
     background-color: var(--profile__social-default-color);
     color: #ffffffe1;
-    /* width: 32px; 
-    height: 32px; */
+    width: 32px; 
+    height: 32px;
     border-radius: 6px;
 }
 /* filter color under icon when hover */
@@ -718,7 +714,7 @@ body.dark-mode {
     transition: all 0.2s ease-in-out;
     padding: 1rem 1rem .5rem 1rem;
     border-radius: 2rem;
-    margin: 0 -1rem -3rem 0;
+    margin: 0 -2rem -3rem 0;
     /* cursor: pointer; */
 }
 .dev__button-container:hover {
@@ -854,12 +850,12 @@ body.dark-mode {
 
 .projects__container .swiper-button-next {
     right: -1rem; 
-    top: 4.5rem;
+    top: 3.25rem;
 }
 
 .projects__container .swiper-button-prev {
     left: -1rem; 
-    top: 4.5rem;
+    top: 3.25rem;
 }
 
 .projects__container .swiper-slide {
@@ -1696,6 +1692,10 @@ body.dark-mode {
     .projects__button .bi-globe2 {
         font-size: .9rem;
     }
+    .projects__container .swiper-button-next,
+    .projects__container .swiper-button-prev {
+        top: 4.5rem;
+    }
 
     .skills__info {
         grid-template-columns: repeat(1, 1fr);
@@ -1872,6 +1872,10 @@ body.dark-mode {
     }
     .projects__button .bi-globe2 {
         font-size: 1rem;
+    }
+    .projects__container .swiper-button-next,
+    .projects__container .swiper-button-prev {
+        top: 4.5rem;
     }
 
     .skills__info {
@@ -2398,7 +2402,6 @@ body.dark-mode {
         margin-right: 1.75rem;
     }
     .dev__button-container {
-        margin-right: -7.5rem;
         margin-top: -1rem;
     }
 
