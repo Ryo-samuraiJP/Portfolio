@@ -26,7 +26,7 @@ const linkAction = () => {
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
-// ************************ Typing Animation *************************
+/* ************************ Typing Animation *************************
 // Function to display the sentence with typing animation
 function displaySentence() {
     var sentenceElement = document.getElementById("job-titles");
@@ -61,6 +61,7 @@ function displaySentence() {
 }
 displaySentence();  // all the function to start displaying the sentence with typing animation
 
+*/
 
 // ************************ Swiper Settings **************************
 let swiperProjects = new Swiper(".projects__container", {
